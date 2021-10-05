@@ -22,6 +22,12 @@ const Layout = ({children, isIndex, lang}) => {
         }else if (window.location.pathname === "/en/lunchmenu") {
             navigate("/lunchmenu" + window.location.hash)
 
+        }else if (window.location.pathname === "/en/menu") {
+            navigate("/menu" + window.location.hash)
+
+        }else if (window.location.pathname === "/menu") {
+            navigate("/en/menu" + window.location.hash)
+
         }
     }
     return (

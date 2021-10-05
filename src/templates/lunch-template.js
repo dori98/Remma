@@ -38,11 +38,11 @@ const LunchTemplate = ({data}) => {
             <Layout isIndex lang={nyelv.lang}>
 
                 <div className={style.gridLunch}>
-                    <div className={style.col8}>
+                    <div className={style.col8Lunch}>
                         <h1 className={` ${style.lunchTitle} `}>{nyelv.lang === "HU" ? "Ebédmenü" : "Lunch Menu"} </h1>
                         <div className={style.line}/>
                     </div>
-                    <div className={`${style.col4} ${style.lunchDateWrapper}`}>
+                    <div className={`${style.col4Lunch} ${style.lunchDateWrapper}`}>
                         <h2 className={` ${style.lunchH2}`}>{ido.datum}</h2>
                         <h2 className={` ${style.lunchH2}`}>11:30-15:00</h2>
                         <h3 className={` ${style.lunchH2}`}>

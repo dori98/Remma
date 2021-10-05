@@ -3,178 +3,72 @@ import * as style from "../css/style.module.css"
 import {graphql} from "gatsby"
 
 import Layout from "../components/Layout";
-import devider from "../images/logo,icon/Névtelen.png";
-import eloetel1 from "../images/lunchmenu/előétel.jpg"
-import foetel1 from "../images/étlap/főétel1.jpg"
-import desszert1 from "../images/étlap/desszert1.jpg"
+import ital from "../images/ital.png";
+import ital2 from "../images/ital2.png";
+import ital3 from "../images/ital4.jpg";
+
 import Seo from "../components/Seo";
 
 const IndexTemplate = ({data,}) => {
     const {
         nyelv,
-        allContentfulEloetelek: {nodes: eloetel},
-        allContentfulLevesek: {nodes: leves},
-        allContentfulFoetelek: {nodes: foetel},
-        allContentfulKoretek: {nodes: koret},
-        allContentfulGrillezveVagyRantva: {nodes: grill},
-        allContentfulDesszertek: {nodes: desszert},
-        allContentfulSavanyusag: {nodes: savanyu},
+        contentfulAkcio: akcio,
 
     } = data
+    console.log(akcio.akciok)
     return (
         <>
             <Seo
                 lang={nyelv.lang === "HU" ? "hu" : "en"}
-                title={"Étlap"}
-                description={"Remma's Bistro étlapja"}
+                title={"Kezdőlap"}
+                description={"Remma's Bistro kezdőlapja"}
                 keywords={"éttrem, bistro, előétel, leves, főétel, köret, desszert "}
                 url={nyelv.lang === "HU" ? "/" : "/en"}
             />
 
 
             <Layout isIndex lang={nyelv.lang}>
+                <div className={style.akcioPage}>
+                    <div className={` ${style.gridAkcio} `}>
+                        <h1 className={`${style.akcioH1} ${style.fullwidth}`}>Állandó akcióink</h1>
 
-                <div className={style.indexpage}>
-
-                    <div className={style.gridIndex}>
-                        <div className={style.col6}>
-                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek-Előételek" : "Soups-Starters"}</h1>
-                            <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
-                        </div>
-                        <div className={style.col6}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            {leves.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-                            {eloetel.map(e => {
+                        <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
+                            {akcio.akciok.map(e => {
                                 return (
                                     <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
+                                        <p className={style.akciokP}> {e}</p>
                                     </div>
                                 )
                             })}
                         </div>
-                        <img src={eloetel1} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
+                        <img src={ital} className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
 
                     </div>
+                    <img src={ital3} className={style.akciokImgPhone}/>
+                    <div className={` ${style.gridAkcio} `}>
+                        <h2 className={`${style.fullwidth} ${style.akcioH2}`}>Heti akciók amik folyamatosan élnek </h2>
+                        <img src={ital2} className={`${style.col4Ital} ${style.akcioImgRight}`}/>
 
-                    <div className={style.gridIndex}>
-
-                        <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Grillezve vagy rántva" : "Grilled or deep fried"}</h1>
-                                <img src={devider} alt={"kep"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {grill.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-
-                        </div>
-
-                        <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {savanyu.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-
-                    </div>
-                    <div className={style.gridIndex}>
-                        <img src={foetel1} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {foetel.map(e => {
+                        <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
+                            {akcio.hetiAkciok.map(e => {
                                 return (
                                     <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
+                                        <p className={style.akciokPHeti}> {e}</p>
                                     </div>
+
                                 )
                             })}
                         </div>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishes"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {koret.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-
                     </div>
-                    <div className={style.gridIndex}>
-                        <div className={style.col6}>
-                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h1>
-                            <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
-                        </div>
-                        <div className={style.col6}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            {desszert.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <img src={desszert1} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
-
-                    </div>
-                    <div className={` ${style.indexAllergenPosition}`}>
-                        <p className={` ${style.indexPAllergen}`}> A: {nyelv.lang === "HU" ? "GLUTÉN" : "GLUTEN"}</p>
-                        <p className={` ${style.indexPAllergen}`}>B: {nyelv.lang === "HU" ? "LAKTÓZ" : "LACTOSE"} </p>
-                        <p className={` ${style.indexPAllergen}`}> C: {nyelv.lang === "HU" ? "RÁK, HAL" : "CANCER, FISH"} </p>
-                        <p className={` ${style.indexPAllergen}`}> D: {nyelv.lang === "HU" ? "DIÓ" : "WALNUT"}</p>
-                        <p className={` ${style.indexPAllergen}`}> E: {nyelv.lang === "HU" ? "TOJÁS" : "EGG"}</p>
-                        <p className={` ${style.indexPAllergen}`}> F: {nyelv.lang === "HU" ? "SZÓJA" : "SOY"} </p>
-                        <p className={` ${style.indexPAllergen}`}> G: {nyelv.lang === "HU" ? "ERŐS" : "STRONG"}</p>
-
-                    </div>
-
-
                 </div>
+
+
             </Layout>
         </>
     )
 }
-
+/*                    <img src={ital3} className={style.akciokImgPhone}/>
+*/
 export const query = graphql`
 query GetSingleIndex($lang: String) 
  
@@ -182,65 +76,11 @@ query GetSingleIndex($lang: String)
     nyelv: contentfulLevesek(lang: {eq: $lang}) {      
         lang        
     },
-    allContentfulEloetelek( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}) {
-      nodes {
-        arak
-        nev
-        
+     contentfulAkcio (lang: {eq: $lang}){      
         lang
-        id
-      }
-    },
-    
-    allContentfulLevesek( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}) {
-      nodes {
-        nev
-        arak
-        lang
-        id
-      }
-    },
- 
-    allContentfulSavanyusag ( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}){
-      nodes {
-        id
-        lang
-        nev
-        arak
-      }
+        akciok
+        hetiAkciok      
     }
-    allContentfulFoetelek ( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}){
-      nodes {
-        arak
-        nev
-        lang
-        id
-      }
-    },
-     allContentfulKoretek( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}) {
-      nodes {
-        arak
-        nev
-        lang
-        id
-      }
-    },
-    allContentfulGrillezveVagyRantva( sort: {fields: updatedAt, order: DESC} filter: {lang: {eq: $lang}}) {
-      nodes {
-        arak
-        nev
-        lang
-        id
-      }
-    },
-    allContentfulDesszertek( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}) {
-      nodes {
-        arak
-        nev
-        id
-        lang
-      }
-    }   
 }  
 `
 

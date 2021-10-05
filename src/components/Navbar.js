@@ -26,6 +26,10 @@ const Navbar = ({isIndex, lang, setLang}) => {
                     className={isIndex ? `${style.col10} ${style.navbarLinkWrapper} ${style.navbarLinkWrapperMargin}` : `${style.navbarLinkWrapper}`}>
                     <Link to={lang === "HU" ? '/' : '/en'}
                           className={` ${style.navbarLink}`}
+                          activeClassName={style.active}>{lang === "HU" ? "Kezdőlap" : "Home"}
+                    </Link>
+                    <Link to={lang === "HU" ? '/menu' : '/en/menu'}
+                          className={` ${style.navbarLink}`}
                           activeClassName={style.active}>{lang === "HU" ? "Étlap" : "Menu"}
                     </Link>
                     <Link to={lang === "HU" ? '/lunchmenu' : '/en/lunchmenu'}
@@ -56,6 +60,11 @@ const Navbar = ({isIndex, lang, setLang}) => {
                                 <FaTimes/>
                             </button>
                             <Link to={lang === "HU" ? '/' : '/en'}
+                                  onClick={() => toLink()}
+                                  className={style.menuLink}>
+                                <h2>{lang === "HU" ? "Kezdőlap" : "Home"}</h2>
+                            </Link>
+                            <Link to={lang === "HU" ? '/menu' : '/en/menu'}
                                   onClick={() => toLink()}
                                   className={style.menuLink}>
                                 <h2>{lang === "HU" ? "Étlap" : "Menu"}</h2>

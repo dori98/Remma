@@ -39,5 +39,14 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+    result.data.nyelv.nodes.forEach(b => {
+        createPage({
+            path: b.lang === "EN" ? `/en/menu` : `/menu`,
+            component: path.resolve(`src/templates/menu-template.js`),
+            context: {
+                lang: b.lang,
+            },
+        })
+    })
 
 }
