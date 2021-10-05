@@ -30,7 +30,7 @@ const IndexTemplate = ({data,}) => {
             <Layout isIndex lang={nyelv.lang}>
                 <div className={style.akcioPage}>
                     <div className={` ${style.gridAkcio} `}>
-                        <h1 className={`${style.akcioH1} ${style.fullwidth}`}>Állandó akcióink</h1>
+                        <h1 className={`${style.akcioH1} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Állandó akcióink" : "Our constant promotions"}</h1>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
                             {akcio.akciok.map(e => {
@@ -46,7 +46,7 @@ const IndexTemplate = ({data,}) => {
                     </div>
                     <img src={ital3} className={style.akciokImgPhone}/>
                     <div className={` ${style.gridAkcio} `}>
-                        <h2 className={`${style.fullwidth} ${style.akcioH2}`}>Heti akciók amik folyamatosan élnek </h2>
+                        <h2 className={`${style.fullwidth} ${style.akcioH2}`}> {nyelv.lang === "HU" ? "Heti akciók amik folyamatosan élnek" : "Weekly promotions "} </h2>
                         <img src={ital2} className={`${style.col4Ital} ${style.akcioImgRight}`}/>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
