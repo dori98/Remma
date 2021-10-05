@@ -150,7 +150,6 @@ const IndexTemplate = ({data,}) => {
                                             <h3 className={`${style.indexH3}`}> {e.nev}</h3>
                                             <p className={`${style.indexArak}`}>{e.arak} Ft</p>
                                         </div>
-                                        <p className={`${style.indexP}`}>{e.leiras}</p>
                                     </div>
                                 )
                             })}
@@ -175,8 +174,7 @@ const IndexTemplate = ({data,}) => {
         </>
     )
 }
-/*                                   <p className={`${style.indexP}`}>{e.leiras}</p>
-*/
+
 export const query = graphql`
 query GetSingleIndex($lang: String) 
  
@@ -188,7 +186,7 @@ query GetSingleIndex($lang: String)
       nodes {
         arak
         nev
-        leiras
+        
         lang
         id
       }
