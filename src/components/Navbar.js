@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
-import {Link} from "gatsby";
-import logo from "../images/logo,icon/logo.png"
-import * as style from "../css/style.module.css"
 import {AiOutlineMenu, FaTimes} from "react-icons/all";
+import {Link} from "gatsby";
+
+import * as style from "../css/style.module.css"
+
+import logo from "../images/logo,icon/logo.png"
 
 const Navbar = ({isIndex, lang, setLang}) => {
     const [isOpen, setIsOpen] = useState(false)

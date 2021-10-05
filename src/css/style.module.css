@@ -1400,8 +1400,11 @@
     }
 
 }
-@media screen and (max-width: 380px ) {
+@media screen and (max-width: 433px ) {
     .col4-lunch {
+        grid-column: -1/1;
+    }
+    .col8-lunch {
         grid-column: -1/1;
     }
 

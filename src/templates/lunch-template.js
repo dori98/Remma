@@ -1,18 +1,13 @@
-import * as React from "react"
-import Layout from "../components/Layout";
-import * as style from "../css/style.module.css";
-import "../css/carousel.css"
-import {graphql} from "gatsby"
+import React from "react";
+import {graphql} from "gatsby";
 import {Carousel} from "react-responsive-carousel";
-import a from "../images/slideshow/1.jpg";
-import b from "../images/slideshow/12.jpg";
-import c from "../images/lunchmenu/desszert.jpg";
-import d from "../images/slideshow/4.jpg";
-import g from "../images/slideshow/7.jpg";
-import keskenyL from "../images/lunchmenu/levesKeskeny.jpg"
-import keskenyF from "../images/lunchmenu/főételKeskeny.jpg"
+import {StaticImage} from "gatsby-plugin-image"
+
+import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
+import * as style from "../css/style.module.css";
+import "../css/carousel.css";
 
 const LunchTemplate = ({data}) => {
     const {
@@ -23,7 +18,6 @@ const LunchTemplate = ({data}) => {
         contentfulEbedmenuIdotartam: ido,
         allContentfulEbedmenuLevesek: {nodes: levesek},
     } = data
-
 
     return (
         <>
@@ -53,8 +47,10 @@ const LunchTemplate = ({data}) => {
                 </div>
 
                 <div className={style.gridFood}>
-                    <img src={b} alt={"kep"} className={`${style.col6} ${style.foodImgLeft}`}/>
-                    <img src={keskenyL} alt={"kep"} className={`${style.col6} ${style.foodImgLeftPhone}`}/>
+                    <StaticImage src={"../images/slideshow/12.jpg"} alt={"kep"}
+                                 className={`${style.col6} ${style.foodImgLeft}`}/>
+                    <StaticImage src={"../images/lunchmenu/levesKeskeny.jpg"} alt={"kep"}
+                                 className={`${style.col6} ${style.foodImgLeftPhone}`}/>
 
 
                     <div className={`${style.foodWrapper} ${style.col6}`}>
@@ -82,24 +78,26 @@ const LunchTemplate = ({data}) => {
                             )
                         })}
                     </div>
-                    <img src={keskenyF} alt={"kep"} className={`${style.col6} ${style.foodImgLeftPhone}`}/>
+                    <StaticImage src={"../images/lunchmenu/főételKeskeny.jpg"} alt={"kep"}
+                                 className={`${style.col6} ${style.foodImgLeftPhone}`}/>
 
-                    <Carousel autoPlay={true} infiniteLoop={true} className={`${style.col6} ${style.carausel}`}>
+                    <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} className={`${style.col6} ${style.carausel}`}>
                         <div>
-                            <img src={a} alt={"kep"}/>
+                            <StaticImage src={"../images/slideshow/1.jpg"} alt={"kep"}/>
                         </div>
                         <div>
-                            <img src={d} alt={"kep"}/>
+                            <StaticImage src={"../images/slideshow/4.jpg"} alt={"kep"}/>
                         </div>
 
                         <div>
-                            <img src={g} alt={"kep"}/>
+                            <StaticImage src={"../images/slideshow/7.jpg"} alt={"kep"}/>
                         </div>
 
                     </Carousel></div>
 
                 <div className={style.gridFood}>
-                    <img src={c} alt={"kep"} className={`${style.col6} ${style.foodImgLeft}`}/>
+                    <StaticImage src={"../images/lunchmenu/desszert.jpg"} alt={"kep"}
+                                 className={`${style.col6} ${style.foodImgLeft}`}/>
                     <div className={`${style.foodWrapper} ${style.col6}`}>
                         <h2 className={style.foodTitle}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h2>
                         {desszert.map(e => {

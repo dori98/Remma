@@ -1,13 +1,11 @@
-import * as React from "react"
-import * as style from "../css/style.module.css"
+import React from "react"
 import {graphql} from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout";
-import devider from "../images/logo,icon/Névtelen.png";
-import eloetel1 from "../images/lunchmenu/előétel.jpg"
-import foetel1 from "../images/étlap/főétel1.jpg"
-import desszert1 from "../images/étlap/desszert1.jpg"
 import Seo from "../components/Seo";
+
+import * as style from "../css/style.module.css"
 
 const MenuTemplate = ({data,}) => {
     const {
@@ -39,7 +37,7 @@ const MenuTemplate = ({data,}) => {
                     <div className={style.gridIndex}>
                         <div className={style.col6}>
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek-Előételek" : "Soups-Starters"}</h1>
-                            <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
                         </div>
                         <div className={style.col6}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
@@ -62,7 +60,7 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <img src={eloetel1} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
+                        <StaticImage  src={"../images/lunchmenu/előétel.jpg"} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                     </div>
 
@@ -71,7 +69,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Grillezve vagy rántva" : "Grilled or deep fried"}</h1>
-                                <img src={devider} alt={"kep"} className={`${style.indexDevider}`}/>
+                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"kep"} className={`${style.indexDevider}`}/>
                             </div>
                             {grill.map(e => {
                                 return (
@@ -87,7 +85,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {savanyu.map(e => {
                                 return (
@@ -101,11 +99,11 @@ const MenuTemplate = ({data,}) => {
 
                     </div>
                     <div className={style.gridIndex}>
-                        <img src={foetel1} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
+                        <StaticImage  src={"../images/étlap/főétel1.jpg"} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {foetel.map(e => {
                                 return (
@@ -121,7 +119,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishes"}</h1>
-                                <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {koret.map(e => {
                                 return (
@@ -139,7 +137,7 @@ const MenuTemplate = ({data,}) => {
                     <div className={style.gridIndex}>
                         <div className={style.col6}>
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h1>
-                            <img src={devider} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
                         </div>
                         <div className={style.col6}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
@@ -154,7 +152,7 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <img src={desszert1} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
+                        <StaticImage  src={"../images/étlap/desszert1.jpg"} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                     </div>
                     <div className={` ${style.indexAllergenPosition}`}>

@@ -1,13 +1,11 @@
-import * as React from "react"
-import * as style from "../css/style.module.css"
-import {graphql} from "gatsby"
-
-import Layout from "../components/Layout";
-import ital from "../images/ital.png";
-import ital2 from "../images/ital2.png";
-import ital3 from "../images/ital4.jpg";
+import React from "react";
+import {graphql} from "gatsby";
+import {StaticImage} from "gatsby-plugin-image";
 
 import Seo from "../components/Seo";
+import Layout from "../components/Layout";
+
+import * as style from "../css/style.module.css";
 
 const IndexTemplate = ({data,}) => {
     const {
@@ -15,7 +13,6 @@ const IndexTemplate = ({data,}) => {
         contentfulAkcio: akcio,
 
     } = data
-    console.log(akcio.akciok)
     return (
         <>
             <Seo
@@ -33,26 +30,26 @@ const IndexTemplate = ({data,}) => {
                         <h1 className={`${style.akcioH1} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Állandó akcióink" : "Our constant promotions"}</h1>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
-                            {akcio.akciok.map(e => {
+                            {akcio.akciok.map((e, key) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={key}>
                                         <p className={style.akciokP}> {e}</p>
                                     </div>
                                 )
                             })}
                         </div>
-                        <img src={ital} className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
+                        <StaticImage src={"../images/ital.png"} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
 
                     </div>
-                    <img src={ital3} className={style.akciokImgPhone}/>
+                    <StaticImage src={"../images/ital4.jpg"} alt="kép" className={style.akciokImgPhone}/>
                     <div className={` ${style.gridAkcio} `}>
                         <h2 className={`${style.fullwidth} ${style.akcioH2}`}> {nyelv.lang === "HU" ? "Heti akciók amik folyamatosan élnek" : "Weekly promotions "} </h2>
-                        <img src={ital2} className={`${style.col4Ital} ${style.akcioImgRight}`}/>
+                        <StaticImage src={"../images/ital2.png"} alt="kép" className={`${style.col4Ital} ${style.akcioImgRight}`}/>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
-                            {akcio.hetiAkciok.map(e => {
+                            {akcio.hetiAkciok.map((e,key) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={key}>
                                         <p className={style.akciokPHeti}> {e}</p>
                                     </div>
 
@@ -67,8 +64,7 @@ const IndexTemplate = ({data,}) => {
         </>
     )
 }
-/*                    <img src={ital3} className={style.akciokImgPhone}/>
-*/
+
 export const query = graphql`
 query GetSingleIndex($lang: String) 
  
@@ -80,6 +76,7 @@ query GetSingleIndex($lang: String)
         lang
         akciok
         hetiAkciok      
+        id
     }
 }  
 `

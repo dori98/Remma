@@ -1,6 +1,7 @@
 import * as React from "react"
+
 import * as style from "../css/style.module.css";
-import a from "../images/slideshow/1.jpg";
+
 import facebook from "../images/logo,icon/facebook.png";
 import instagram from "../images/logo,icon/insta.png";
 

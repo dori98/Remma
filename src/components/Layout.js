@@ -1,7 +1,8 @@
 import * as React from "react"
+import {navigate} from "gatsby"
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import {navigate} from "gatsby"
 
 const Layout = ({children, isIndex, lang}) => {
     function setLang() {
