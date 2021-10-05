@@ -1,11 +1,11 @@
-import React from "react"
-import {Helmet} from "react-helmet"
-import favicon from "/src/images/logo,icon/R.png"
-import defaultImage from "/src/assets/logo2.png"
+import React from "react";
+import {Helmet} from "react-helmet";
+import favicon from "/src/images/logo,icon/R.png";
+import seoImage from "/src/assets/seo-image.png";
 
-const Seo = ({lang, title, description, keywords, image, url}) => {
+const Seo = ({lang, title, description, keywords, url}) => {
 
-    const defaultUrl = "https://remmas.netlify.app" ;
+    const defaultUrl = "https://remmas.netlify.app";
 
     return (
         <Helmet htmlAttributes={{lang: lang}}>
@@ -18,7 +18,7 @@ const Seo = ({lang, title, description, keywords, image, url}) => {
             {/* OpenGraph tagek, a social mediához */}
             <meta property="og:title" content={title}/>
             <meta property="og:url" content={defaultUrl + url}/>
-            {image ? <meta property="og:image" content={defaultUrl + image}/> : <meta property="og:image" content={defaultUrl + defaultImage}/>}
+            <meta property="og:image" content={defaultUrl + seoImage}/>
             <meta property="og:image:width" content="1200"/>
             <meta property="og:image:height" content="630"/>
             {description && <meta property="og:description" content={description}/>}
