@@ -1274,23 +1274,26 @@
         --h3: 16px;
     }
     .akciok-p-heti{
-        width:80%;
-        text-align: center;
+        width:70%;
+        text-align: left;
         letter-spacing: 1px;
+        padding: 20px 0 20px 0;
 
     }
 
     .akciok-p{
-        width: 80%;
-        text-align: center;
+        width: 70%;
+        text-align: left;
         letter-spacing: 1px;
+        padding: 20px 0 20px 0;
 
     }
     .grid-akcio{
         padding: 20px 0 20px 0;
     }
     .akcio-h1{
-        font-size: calc(var(--h1)*1.5);
+        font-size: calc(var(--h1)*1.7);
+        width: 100%;
     }
 
     .indexpage {
