@@ -1,13 +1,20 @@
 import React from "react";
 import {graphql} from "gatsby";
 import {Carousel} from "react-responsive-carousel";
-import {StaticImage} from "gatsby-plugin-image"
 
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
 import * as style from "../css/style.module.css";
 import "../css/carousel.css";
+
+import a from "../images/slideshow/12.jpg"
+import b from "../images/lunchmenu/levesKeskeny.jpg"
+import c from "../images/lunchmenu/főételKeskeny.jpg"
+import d from "../images/slideshow/1.jpg"
+import e from "../images/slideshow/4.jpg"
+import f from "../images/slideshow/7.jpg"
+import g from "../images/lunchmenu/desszert.jpg"
 
 const LunchTemplate = ({data}) => {
     const {
@@ -47,10 +54,10 @@ const LunchTemplate = ({data}) => {
                 </div>
 
                 <div className={style.gridFood}>
-                    <StaticImage src={"../images/slideshow/12.jpg"} alt={"kep"}
-                                 className={`${style.col6} ${style.foodImgLeft}`}/>
-                    <StaticImage src={"../images/lunchmenu/levesKeskeny.jpg"} alt={"kep"}
-                                 className={`${style.col6} ${style.foodImgLeftPhone}`}/>
+                    <img src={a} alt={"kep"}
+                         className={`${style.col6} ${style.foodImgLeft}`}/>
+                    <img src={b} alt={"kep"}
+                         className={`${style.col6} ${style.foodImgLeftPhone}`}/>
 
 
                     <div className={`${style.foodWrapper} ${style.col6}`}>
@@ -78,26 +85,27 @@ const LunchTemplate = ({data}) => {
                             )
                         })}
                     </div>
-                    <StaticImage src={"../images/lunchmenu/főételKeskeny.jpg"} alt={"kep"}
-                                 className={`${style.col6} ${style.foodImgLeftPhone}`}/>
+                    <img src={c} alt={"kep"}
+                         className={`${style.col6} ${style.foodImgLeftPhone}`}/>
 
-                    <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} className={`${style.col6} ${style.carausel}`}>
+                    <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}
+                              className={`${style.col6} ${style.carausel}`}>
                         <div>
-                            <StaticImage src={"../images/slideshow/1.jpg"} alt={"kep"}/>
+                            <img src={d} alt={"kep"}/>
                         </div>
                         <div>
-                            <StaticImage src={"../images/slideshow/4.jpg"} alt={"kep"}/>
+                            <img src={e} alt={"kep"}/>
                         </div>
 
                         <div>
-                            <StaticImage src={"../images/slideshow/7.jpg"} alt={"kep"}/>
+                            <img src={f} alt={"kep"}/>
                         </div>
 
                     </Carousel></div>
 
                 <div className={style.gridFood}>
-                    <StaticImage src={"../images/lunchmenu/desszert.jpg"} alt={"kep"}
-                                 className={`${style.col6} ${style.foodImgLeft}`}/>
+                    <img src={g} alt={"kep"}
+                         className={`${style.col6} ${style.foodImgLeft}`}/>
                     <div className={`${style.foodWrapper} ${style.col6}`}>
                         <h2 className={style.foodTitle}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h2>
                         {desszert.map(e => {
@@ -114,10 +122,7 @@ const LunchTemplate = ({data}) => {
         </>
     )
 }
-/*<div>
-                    <p className={` ${style.lunchFooter}`}>{nyelv.lang === "HU" ? "Rendeld meg személyesen vagy telefonon és ha magad jössz ért, akkor 20% kedvezményt adunk a végöszegből!" : "Order in person or by phone and if you come for it, we will give you a 20% discount on the final amount!"}
-                    </p>
-                </div>*/
+
 export const query = graphql`
 query GetSingleLunch($lang: String) 
   {

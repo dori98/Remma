@@ -1,12 +1,14 @@
 import React from "react";
 import {graphql} from "gatsby";
-import {StaticImage} from "gatsby-plugin-image";
 
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 
 import * as style from "../css/style.module.css";
 
+import ital from "../images/ital.png"
+import ital2 from "../images/ital2.png"
+import ital3 from "../images/ital4.jpg"
 const IndexTemplate = ({data,}) => {
     const {
         nyelv,
@@ -38,13 +40,13 @@ const IndexTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <StaticImage src={"../images/ital.png"} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
+                        <img src={ital} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
 
                     </div>
-                    <StaticImage src={"../images/ital4.jpg"} alt="kép" className={style.akciokImgPhone}/>
+                    <img src={ital3} alt="kép" className={style.akciokImgPhone}/>
                     <div className={` ${style.gridAkcio} `}>
                         <h2 className={`${style.fullwidth} ${style.akcioH2}`}> {nyelv.lang === "HU" ? "Heti akciók amik folyamatosan élnek" : "Weekly promotions "} </h2>
-                        <StaticImage src={"../images/ital2.png"} alt="kép" className={`${style.col4Ital} ${style.akcioImgRight}`}/>
+                        <img src={ital2} alt="kép" className={`${style.col4Ital} ${style.akcioImgRight}`}/>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
                             {akcio.hetiAkciok.map((e,key) => {

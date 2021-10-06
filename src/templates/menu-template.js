@@ -1,11 +1,20 @@
 import React from "react"
 import {graphql} from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
 import * as style from "../css/style.module.css"
+
+import a from "../images/logo,icon/Névtelen.png"
+import b from "../images/lunchmenu/előétel.jpg"
+import c from "../images/logo,icon/Névtelen.png"
+import d from "../images/logo,icon/Névtelen.png"
+import e from "../images/étlap/főétel1.jpg"
+import f from "../images/logo,icon/Névtelen.png"
+import g from "../images/logo,icon/Névtelen.png"
+import h from "../images/logo,icon/Névtelen.png"
+import x from "../images/étlap/desszert1.jpg"
 
 const MenuTemplate = ({data,}) => {
     const {
@@ -37,7 +46,7 @@ const MenuTemplate = ({data,}) => {
                     <div className={style.gridIndex}>
                         <div className={style.col6}>
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek-Előételek" : "Soups-Starters"}</h1>
-                            <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <img  src={a} alt={"devider"} className={`${style.indexDevider}`}/>
                         </div>
                         <div className={style.col6}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
@@ -60,7 +69,7 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <StaticImage  src={"../images/lunchmenu/előétel.jpg"} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
+                        <img  src={b} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                     </div>
 
@@ -69,7 +78,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Grillezve vagy rántva" : "Grilled or deep fried"}</h1>
-                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"kep"} className={`${style.indexDevider}`}/>
+                                <img  src={c} alt={"kep"} className={`${style.indexDevider}`}/>
                             </div>
                             {grill.map(e => {
                                 return (
@@ -85,7 +94,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
-                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <img  src={d} alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {savanyu.map(e => {
                                 return (
@@ -99,11 +108,11 @@ const MenuTemplate = ({data,}) => {
 
                     </div>
                     <div className={style.gridIndex}>
-                        <StaticImage  src={"../images/étlap/főétel1.jpg"} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
+                        <img  src={e} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
-                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <img  src={f} alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {foetel.map(e => {
                                 return (
@@ -119,7 +128,7 @@ const MenuTemplate = ({data,}) => {
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
                             <div>
                                 <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishes"}</h1>
-                                <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
+                                <img  src={g } alt={"devider"} className={`${style.indexDevider}`}/>
                             </div>
                             {koret.map(e => {
                                 return (
@@ -137,7 +146,7 @@ const MenuTemplate = ({data,}) => {
                     <div className={style.gridIndex}>
                         <div className={style.col6}>
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h1>
-                            <StaticImage  src={"../images/logo,icon/Névtelen.png"} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <img  src={h} alt={"devider"} className={`${style.indexDevider}`}/>
                         </div>
                         <div className={style.col6}/>
                         <div className={`${style.col6} ${style.indexEloetelPosition}`}>
@@ -152,7 +161,7 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <StaticImage  src={"../images/étlap/desszert1.jpg"} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
+                        <img  src={x} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                     </div>
                     <div className={` ${style.indexAllergenPosition}`}>

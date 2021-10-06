@@ -1,6 +1,5 @@
 import React from "react"
 import {graphql} from "gatsby";
-import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
@@ -10,7 +9,7 @@ import "../css/carousel.css"
 
 import facebook from "../images/logo,icon/facebook.png"
 import instagram from "../images/logo,icon/insta.png"
-
+import ettrem from "../images/slideshow/3.jpg"
 const ContactsTemplate = ({data,}) => {
     const {
         nyelv,
@@ -46,7 +45,7 @@ const ContactsTemplate = ({data,}) => {
 
                     </div>
 
-                    <StaticImage src={"../images/slideshow/3.jpg"}  alt="kép" className={`${style.col6} ${style.contactImg}`}/>
+                    <img src={ettrem}  alt="kép" className={`${style.col6} ${style.contactImg}`}/>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6141158185!2d19.05709231515502!3d47.49743027917756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddd272a4343b%3A0x20ed7c2db7f0bb1d!2sRemma&#39;s%20Bistro!5e0!3m2!1shu!2shu!4v1631213976792!5m2!1shu!2shu"
                         allowFullScreen=""
