@@ -1274,17 +1274,17 @@
         --h3: 16px;
     }
     .akciok-p-heti{
-        width:70%;
-        text-align: left;
-        letter-spacing: 1px;
+        width:80%;
+        text-align: center;
+        letter-spacing: 2px;
         padding: 20px 0 20px 0;
 
     }
 
     .akciok-p{
-        width: 70%;
-        text-align: left;
-        letter-spacing: 1px;
+        width: 80%;
+        text-align: center;
+        letter-spacing: 2px;
         padding: 20px 0 20px 0;
 
     }
