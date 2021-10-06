@@ -32,7 +32,7 @@ const LunchTemplate = ({data}) => {
                 lang={nyelv.lang === "HU" ? "hu" : "en"}
                 title={"Ebédmenü"}
                 description={"Remma's Bistro heti ebédmenüje"}
-                keywords={"éttrem, bistro, előétel, leves, főétel, köret, desszert, menü, menu "}
+                keywords={"éttrem, remma's bistro, bistro, előétel, eloetel, leves, főétel, foetel, köret,koret, desszert, menü, menu , savanyúság, savanyusag"}
                 url={nyelv.lang === "HU" ? "/lunchmenu" : "/en/lunchmenu"}
             />
 

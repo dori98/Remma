@@ -21,7 +21,7 @@ const IndexTemplate = ({data,}) => {
                 lang={nyelv.lang === "HU" ? "hu" : "en"}
                 title={"Kezdőlap"}
                 description={"Remma's Bistro kezdőlapja"}
-                keywords={"éttrem, bistro, előétel, leves, főétel, köret, desszert "}
+                keywords={"éttrem, remma's bistro, bistro, előétel, leves, főétel, köret, desszert , akció, heti akció"}
                 url={nyelv.lang === "HU" ? "/" : "/en"}
             />
 

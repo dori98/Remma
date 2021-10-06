@@ -34,7 +34,7 @@ const MenuTemplate = ({data,}) => {
                 lang={nyelv.lang === "HU" ? "hu" : "en"}
                 title={"Étlap"}
                 description={"Remma's Bistro étlapja"}
-                keywords={"éttrem, bistro, előétel, leves, főétel, köret, desszert "}
+                keywords={"éttrem,remma's bistro, etterem, remma, remmas, bistro, előétel, eloetel, leves, főétel, foetel, köret,koret, desszert, menü, menu , savanyúság, savanyusag"}
                 url={nyelv.lang === "HU" ? "/menu" : "/en/menu"}
             />
 

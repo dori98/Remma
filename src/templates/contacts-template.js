@@ -20,7 +20,7 @@ const ContactsTemplate = ({data,}) => {
                 lang={nyelv.lang === "HU" ? "hu" : "en"}
                 title={"Elérhetőség"}
                 description={"Remma's Bistro elérhetőségei."}
-                keywords={"bistro, remmma, remmas, elérhetőség, étterem"}
+                keywords={"bistro, remma's bistro, remmma, remmas, elérhetőség, étterem, Rumbach "}
                 url={nyelv.lang === "HU" ? "/contacts" : "/en/contacts"}
             />
 
