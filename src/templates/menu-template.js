@@ -77,7 +77,7 @@ const MenuTemplate = ({data,}) => {
 
                         <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
                             <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Grillezve vagy rántva" : "Grilled or deep fried"}</h1>
+                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
                                 <img  src={c} alt={"kep"} className={`${style.indexDevider}`}/>
                             </div>
                             {grill.map(e => {
@@ -153,9 +153,8 @@ const MenuTemplate = ({data,}) => {
                             {desszert.map(e => {
                                 return (
                                     <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
+                                        <div className={style.indexDessertWrapper}>
                                             <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
                                         </div>
                                     </div>
                                 )
@@ -242,7 +241,7 @@ query GetSingleMenu($lang: String)
     },
     allContentfulDesszertek( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}) {
       nodes {
-        arak
+        
         nev
         id
         lang

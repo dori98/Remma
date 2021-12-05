@@ -608,7 +608,10 @@
     grid-template-columns: 1fr 0.5fr;
     padding: 15px;
 }
-
+.index-dessert-wrapper {
+    text-align: center;
+    padding:30px;
+}
 .index-eloetel-position {
     width: 90%;
     justify-self: center;
@@ -1132,7 +1135,10 @@
         justify-self: center;
         margin: auto;
     }
-
+    .index-dessert-wrapper {
+        text-align: center;
+        padding:10px;
+    }
 
     .logo {
         height: 100px;
