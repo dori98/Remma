@@ -1,0 +1,85 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+
+    background-color: rgb(255, 255, 255); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    background:  rgba(0, 0, 0, 0.7);;
+}
+
+.modal__content {
+    display: grid;
+    justify-content: center;
+    margin-top: 2vh;
+    margin: auto;
+    grid-template-rows: 80vh 10vh;
+    grid-template-columns: 80vw;
+}
+
+/* Modal Content (image) */
+.modal__content__image {
+    margin: auto;
+    display: block;
+    padding: 40px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+
+/* Caption of Modal Image */
+.modal__title {
+    display: block;
+    text-align: center;
+    color: white;
+    align-self: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Add Animation */
+.modal-content,
+.modal__title {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .modal__content__image {
+
+        padding: 5px;
+
+    }
+}

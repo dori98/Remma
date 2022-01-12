@@ -38,6 +38,10 @@ const Navbar = ({isIndex, lang, setLang}) => {
                           className={` ${style.navbarLink}`}
                           activeClassName={style.active}>{lang === "HU" ? "Ebédmenü" : "Lunch Menu"}
                     </Link>
+                    <Link to={lang === "HU" ? '/galery' : '/en/galery'}
+                          className={` ${style.navbarLink}`}
+                          activeClassName={style.active}>{lang === "HU" ? "Galéria" : "Galery"}
+                    </Link>
                     <Link to={lang === "HU" ? '/contacts' : '/en/contacts'}
                           className={` ${style.navbarLink}`}
                           activeClassName={style.active}>{lang === "HU" ? "Kapcsolat" : "Contacts"}
@@ -75,6 +79,11 @@ const Navbar = ({isIndex, lang, setLang}) => {
                                   onClick={() => toLink()}
                                   className={style.menuLink}>
                                 <h2>{lang === "HU" ? "Ebédmenü" : "Lunch Menu"}</h2>
+                            </Link>
+                            <Link to={lang === "HU" ? '/galery' : '/en/galery'}
+                                  onClick={() => toLink()}
+                                  className={style.menuLink}>
+                                <h2>{lang === "HU" ? "Kapcsolat" : "Contacts"}</h2>
                             </Link>
                             <Link to={lang === "HU" ? '/contacts' : '/en/contacts'}
                                   onClick={() => toLink()}

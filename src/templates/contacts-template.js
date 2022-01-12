@@ -62,7 +62,7 @@ const ContactsTemplate = ({data,}) => {
 export const query = graphql`
 query GetSingleContact($lang: String) 
   {
-    nyelv: contentfulLevesek(lang: {eq: $lang}){
+    nyelv:contentfulLevesek(lang: {eq: $lang}){
       
         lang
         

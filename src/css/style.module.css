@@ -63,7 +63,23 @@
 .col11 {
     grid-column: span 11;
 }
-
+/*galery*/
+.galery-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+.galery-photosize{
+    width: 300px;
+    height: 200px;
+    display: grid;
+    justify-self: center;
+    margin: auto;
+}
 /*manu*/
 .navbar-menu {
     display: none;
@@ -554,8 +570,24 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: auto;
-    padding: 20px 0px 20px 0px;
-    line-height: 1.5;
+    padding: 50px 0px 50px 0px;
+    line-height: 1.2;
+
+}
+.grid-index-big {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    line-height: 1.2;
+
+}
+.grid-index-small{
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    line-height: 1;
 }
 
 .indexpage {
@@ -564,14 +596,16 @@
 }
 
 .index-eloetel-img {
-    width: auto;
-    height: 37vh;
+    width: 60vh;
+    height: 40vh;
+    man-width:600px ;
+    min-width:300px ;
     max-height: 400px;
-    display: grid;
-    justify-self: center;
-    align-self: center;
     min-height: 150px;
+    margin: auto;
+
 }
+
 
 
 .index-title {
@@ -581,6 +615,14 @@
 
 .index-h3 {
     font-size: var(--h3);
+}
+.index-h3-hover {
+    font-size: var(--h3);
+    display: grid;
+}
+.index-h3-hover:hover {
+    color: gray;
+
 }
 
 .index-p {
@@ -672,6 +714,12 @@
 
     .grid-index {
         max-width: 1600px;
+        line-height: 1;
+
+    }
+    .grid-index-big {
+        max-width: 1600px;
+        line-height: 1;
 
     }
 
@@ -684,6 +732,22 @@
         max-height: 600px;
     }
 
+}
+@media screen and (max-width: 1870px) {
+    .galery-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+        column-gap: 20px;
+        row-gap: 20px;
+        margin: auto;
+        padding: 50px;
+        justify-self: center;
+        width: 80%;
+    }
+    .galery-photosize{
+        width: 250px;
+        height: 150px;
+    }
 }
 
 
@@ -711,6 +775,15 @@
     .contact-img {
         max-height: 400px;
         max-width: 500px;
+    }
+    .galery-page{
+        grid-template-columns: 1fr 1fr 1fr   ;
+        row-gap: 30px;
+        width: 80%;
+    }
+    .galery-photosize{
+        width: 270px;
+        height: 170px;
     }
 }
 
@@ -772,8 +845,12 @@
     }
 
     .index-eloetel-img {
-        width: auto;
-        height: 30vh;
+        width: 40vh;
+        min-width: 400px;
+        max-width: 450px;
+        min-height: 300px;
+        max-height: 300px;
+        height: 300px;
         display: grid;
         justify-self: center;
         align-self: center;
@@ -811,6 +888,10 @@
     .contact-img {
         max-height: 300px;
         max-width: 400px;
+    }
+    .galery-photosize{
+        width: 250px;
+        height: 150px;
     }
 }
 
@@ -857,7 +938,9 @@
     }
 
     .index-eloetel-img {
-        max-height: 300px;
+        max-height: 250px;
+        min-width: 350px;
+        max-width: 350px;
     }
 
     .index-allergen-position {
@@ -883,11 +966,15 @@
     .akcio-img-left{
         max-height: 450px;
     }
+    .galery-page{
+        width: 90%;
+        padding: 0;
+    }
 
 
 }
 
-@media screen and (max-width: 1000px ) {
+@media screen and (max-width: 1100px ) {
     .logo {
         height: 130px;
         padding: 10px;
@@ -904,7 +991,12 @@
         grid-column: 1/-1;
 
     }
-
+    .grid-index-small{
+        display: grid;
+    }
+    .grid-index-big{
+        display: none;
+    }
     .contact-img {
         display: none;
 
@@ -950,26 +1042,26 @@
         margin-top: -40px;
     }
 
-    .index-foetel-img {
-        width: 90%;
-        height: 200px;
-        object-fit: cover;
-        margin: auto;
-        padding-bottom: 50px;
-        object-fit: cover;
-        object-position: top;
-    }
 
     .index-eloetel-img {
         width: 90%;
+        max-width: 600px;
         height: 60%;
-        min-height: 250px;
+        min-height: 300px;
         max-height: 380px;
         object-fit: cover;
         margin: auto;
         padding-bottom: 30px;
         object-fit: cover;
         object-position: center;
+    }
+    .galery-photosize{
+        width: 200px;
+        height: 100px;
+    }
+    .galery-page{
+        row-gap: 20px;
+        column-gap: 15px;
     }
 
 
@@ -1055,6 +1147,13 @@
     }
     .line{display: none}
 
+    .galery-page{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 15px;
+        width: 70%;
+    }
+
 }
 
 @media screen and (max-width: 780px ) {
@@ -1069,6 +1168,14 @@
         min-height: 350px;
 
 
+    }
+    .index-eloetel-img {
+        width: 90%;
+        min-height: 280px;
+        max-height: 280px;
+        object-fit: cover;
+        margin: auto;
+        object-position: center;
     }
 
     .index-allergen-position {
@@ -1087,6 +1194,12 @@
     .food-img-left-phone {
         max-width: 500px;
         min-width: 400px;
+    }
+    .galery-page{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 15px;
+        width: 90%;
     }
 }
 
@@ -1181,6 +1294,15 @@
         object-fit: cover;
         object-position: top;
     }
+    .galery-photosize{
+        width: 250px;
+        height: 150px;
+
+    }
+    .galery-page{
+        grid-template-columns: 1fr;
+
+    }
 
 }
 
@@ -1193,7 +1315,12 @@
         grid-column: span 12;
     }
 
+    .index-eloetel-img {
+        min-height: 200px;
+        height: 200px;
+        max-height: 200px;
 
+    }
     .grid-lunch {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -1268,7 +1395,11 @@
         max-height: 200px;
 
     }
+    .galery-page{
+        width: 50%;
 
+
+    }
 
 }
 
@@ -1279,12 +1410,22 @@
         --p: 16px;
         --h3: 16px;
     }
+    .galery-photosize{
+        width: 200px;
+        height: 100px;
+    }
     .akciok-p-heti{
         width:80%;
         text-align: center;
         letter-spacing: 2px;
         padding: 20px 0 20px 0;
 
+    }
+    .grid-index-small{
+        display: grid;
+    }
+    .grid-index-big{
+        display: none;
     }
 
     .akciok-p{
@@ -1315,13 +1456,10 @@
 
     .index-eloetel-img {
         width: 90%;
-        height: 60%;
-        min-height: 150px;
-        max-height: 300px;
+        min-height: 180px;
+        height: 180px;
         object-fit: cover;
         margin: auto;
-        padding-bottom: 0;
-        object-fit: cover;
         object-position: center;
     }
 
@@ -1416,7 +1554,15 @@
     .col8-lunch {
         grid-column: -1/1;
     }
+    .index-eloetel-img {
+        width: 90%;
+        min-width: 200px;
+        max-width: 300px;
+        min-height: 150px;
+        height: 150px;
+        max-height: 150px;
 
+    }
     .lunch-date-wrapper {
         opacity: 60%;
         text-align: left;
