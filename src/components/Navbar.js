@@ -83,7 +83,7 @@ const Navbar = ({isIndex, lang, setLang}) => {
                             <Link to={lang === "HU" ? '/galery' : '/en/galery'}
                                   onClick={() => toLink()}
                                   className={style.menuLink}>
-                                <h2>{lang === "HU" ? "Kapcsolat" : "Contacts"}</h2>
+                                <h2>{lang === "HU" ? "Galéria" : "Galery"}</h2>
                             </Link>
                             <Link to={lang === "HU" ? '/contacts' : '/en/contacts'}
                                   onClick={() => toLink()}
