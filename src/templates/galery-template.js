@@ -24,12 +24,9 @@ const GaleryTemplate = ({data,}) => {
             />
             <Layout isIndex lang={nyelv.lang}>
                 <div className={style.gridLunch}>
-                    <div className={style.col8Lunch}>
-                        <h1 className={` ${style.lunchTitle} `}>{nyelv.lang === "HU" ? "Galéria" : "Galery"} </h1>
-                        <div className={style.line}/>
-                    </div>
-                    <div className={style.col4}/>
-                    <div  className={`${style.galeryPage} ${style.fullwidth}`}>
+                    <h1 className={`${style.akcioH1} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Galéria" : "Galery"}</h1>
+
+                    <div   className={`${style.galeryPage} ${style.fullwidth}`}>
                         {
                             contentfulGaleria.fenykepek.map(x=>{
                                 return(

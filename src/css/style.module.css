@@ -1297,11 +1297,10 @@
     .galery-photosize{
         width: 250px;
         height: 150px;
-
     }
     .galery-page{
         grid-template-columns: 1fr;
-
+         width: 80%;
     }
 
 }
@@ -1411,8 +1410,11 @@
         --h3: 16px;
     }
     .galery-photosize{
-        width: 200px;
-        height: 100px;
+        width: 300px;
+        height: 200px;
+    }
+    .galery-page{
+        width: 100%;
     }
     .akciok-p-heti{
         width:80%;
