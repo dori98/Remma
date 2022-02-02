@@ -8,7 +8,8 @@ import Image from "gatsby-image"
 import * as style from "../css/style.module.css"
 
 import a from "../images/logo,icon/Névtelen.png"
-import b from "../images/lunchmenu/előétel.jpg"
+
+import {Carousel} from "react-responsive-carousel";
 
 
 const MenuTemplate = ({data,}) => {
@@ -40,6 +41,7 @@ const MenuTemplate = ({data,}) => {
         allContentfulDesszertek: {nodes: desszert},
         allContentfulSavanyusag: {nodes: savanyu},
         contentfulAlapKepek,
+        contentfulDesszertek,
     } = data
 
 
@@ -59,9 +61,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===eloetel && (
                                     <div>
-                                        {eloetel.map(blog => {
+                                        {eloetel.map((blog, index) => {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -88,9 +90,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Előételek" : "Starters"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {eloetel.map(e => {
+                            {eloetel.map((e, index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, eloetel)}
@@ -108,9 +110,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Előételek" : "Starters"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {eloetel.map(e => {
+                            {eloetel.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, eloetel)}
@@ -126,9 +128,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===eloetel && (
                                     <div>
-                                        {eloetel.map(blog => {
+                                        {eloetel.map((blog, index) => {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -160,9 +162,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek" : "Soups"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {leves.map(e => {
+                            {leves.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, leves)}
@@ -178,9 +180,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===leves && (
                                     <div>
-                                        {leves.map(blog => {
+                                        {leves.map((blog,index) => {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -209,9 +211,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===grill && (
                                     <div>
-                                        {grill.map(blog => {
+                                        {grill.map((blog,index)=> {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -237,9 +239,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {grill.map(e => {
+                            {grill.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, grill)}
@@ -258,9 +260,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {grill.map(e => {
+                            {grill.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, grill)}
@@ -276,9 +278,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===grill && (
                                     <div>
-                                        {grill.map(blog => {
+                                        {grill.map((blog,index) => {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -307,9 +309,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {foetel.map(e => {
+                            {foetel.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={e.fenykep == null ? `${style.indexH3}` : `${style.indexH3Hover}`}
                                                 onMouseEnter={() => toLink(e.fenykep, e.nev, foetel)}
@@ -325,9 +327,9 @@ const MenuTemplate = ({data,}) => {
                             {
                                 isMouse && contentful===foetel&& (
                                     <div>
-                                        {foetel.map(blog => {
+                                        {foetel.map((blog,index) => {
                                             return (
-                                                <div key={blog.id}>
+                                                <div key={index}>
                                                     {
                                                         blog.fenykep && blog.nev === name &&  (
                                                             <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
@@ -357,9 +359,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishess"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {koret.map(e => {
+                            {koret.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={`${style.indexH3}`}> {e.nev}</h3>
                                             <p className={`${style.indexArak}`}>{e.arak} Ft</p>
@@ -372,9 +374,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {savanyu.map(e => {
+                            {savanyu.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexFoodWrapper}>
                                             <h3 className={`${style.indexH3}`}> {e.nev}</h3>
                                             <p className={`${style.indexArak}`}>{e.arak} Ft</p>
@@ -389,9 +391,9 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Dessert"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {desszert.map(e => {
+                            {desszert.map((e,index) => {
                                 return (
-                                    <div key={e.id}>
+                                    <div key={index}>
                                         <div className={style.indexDessertWrapper}>
                                             <h3 className={`${style.indexH3}`}> {e.nev}</h3>
                                         </div>
@@ -400,24 +402,19 @@ const MenuTemplate = ({data,}) => {
                             })}
                         </div>
                         <div className={style.col6}>
-                            {desszert.map(blog => {
-                                return (
-                                    <div key={blog.id}>
-                                        {
-                                            blog.fenykep && (
-                                                <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
-                                            )
-                                        }
-                                        {
-                                            !blog.fenykep && (
-                                                <img src={b} alt={"kep"}
-                                                     className={`${style.indexEloetelImg} ${style.col6}`}/>
-                                            )
-                                        }
+                            <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}
+                                      className={`${style.col6} ${style.carausel2}`}>
+                                {
+                                    contentfulDesszertek.fenykepek.map(x=>{
+                                        return(
+                                            <div key={x.id} >
+                                                <Image fluid={x.fluid}className={style.indexEloetelImg} />
+                                            </div>
+                                        )
+                                    })
+                                }
 
-                                    </div>
-                                )
-                            })}
+                            </Carousel>
                         </div>
                     </div>
                     <div className={` ${style.indexAllergenPosition}`}>
@@ -459,7 +456,7 @@ query GetSingleMenu($lang: String)
         id
       }
     },
-   
+  
   contentfulAlapKepek {
       eloetel {
         fluid {
@@ -497,7 +494,14 @@ query GetSingleMenu($lang: String)
         }
       }
     },
- 
+  contentfulDesszertek {
+        id
+      fenykepek {
+        fluid {
+              ...GatsbyContentfulFluid
+        }
+      }
+    },
     allContentfulSavanyusag ( sort: {fields: updatedAt, order: ASC} filter: {lang: {eq: $lang}}){
       nodes {
         id
@@ -550,7 +554,7 @@ query GetSingleMenu($lang: String)
         nev
         id
         lang
-         fenykep {
+         fenykepek {
           fluid {
               ...GatsbyContentfulFluid
 
@@ -562,6 +566,26 @@ query GetSingleMenu($lang: String)
 `
 
 export default MenuTemplate
+/* <div className={style.col6}>
+                            {desszert.map(blog => {
+                                return (
+                                    <div key={blog.id}>
+                                        {
+                                            blog.fenykep && (
+                                                <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                            )
+                                        }
+                                        {
+                                            !blog.fenykep && (
+                                                <img src={b} alt={"kep"}
+                                                     className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                            )
+                                        }
+
+                                    </div>
+                                )
+                            })}
+                        </div>*/
 /*
  <Layout isIndex lang={nyelv.lang}>
 

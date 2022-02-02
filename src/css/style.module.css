@@ -1019,6 +1019,9 @@
     .carausel {
         display: none;
     }
+    .carausel2{
+        display:grid;
+    }
 
     .food-img-left-phone {
         width: 100%;
