@@ -41,7 +41,7 @@ const ContactsTemplate = ({data,}) => {
                             Sebestyén u. 7, 1075</p>
                         <p className={style.contactsP}>Email: info@remmas.hu</p>
                         <p className={style.contactsP}>{nyelv.lang === "HU" ? "Telefon" : "Phone"}: +36 1 426 1928</p>
-                        <h2 className={style.contactsP}>{nyelv.lang === "HU" ? "Nyitvatartás: Hétfő-Péntek 11:30-22:00" : "Open: Monday-Friday 11:30-22:00"}</h2>
+                        <h2 className={style.contactsP}>{nyelv.lang === "HU" ? "Nyitvatartás: Kedd-Szombat 11:30-22:00" : "Open: Tuesday-Saturday 11:30-22:00"}</h2>
 
                     </div>
 
