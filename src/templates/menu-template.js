@@ -8,16 +8,19 @@ import Image from "gatsby-image"
 import * as style from "../css/style.module.css"
 
 import a from "../images/logo,icon/Névtelen.png"
+import kv from "../images/kv.jpg"
+import wine from "../images/wine.jpg"
+import ital from "../images/koktel.jpg"
 
 import {Carousel} from "react-responsive-carousel";
 
 
 const MenuTemplate = ({data,}) => {
     const [name, setName] = useState(String)
-    const [emptyContentful]=useState()
-    const [contentful, setContentful] =useState()
+    const [emptyContentful] = useState()
+    const [contentful, setContentful] = useState()
     const [isMouse, setIsMouse] = useState(false)
-    const toLink = (y, x,z) => {
+    const toLink = (y, x, z) => {
 
         setContentful(z);
         if (y != null) {
@@ -40,6 +43,10 @@ const MenuTemplate = ({data,}) => {
         allContentfulGrillezveVagyRantva: {nodes: grill},
         allContentfulDesszertek: {nodes: desszert},
         allContentfulSavanyusag: {nodes: savanyu},
+        allContentfulBorlap: {nodes: borlap},
+        allContentfulAlkoholosItalok: {nodes: alkohol},
+        allContentfulUditok: {nodes: udito},
+        allContentfulKavek: {nodes: kave},
         contentfulAlapKepek,
         contentfulDesszertek,
     } = data
@@ -57,16 +64,17 @@ const MenuTemplate = ({data,}) => {
             <Layout isIndex lang={nyelv.lang}>
                 <div className={style.indexpage}>
                     <div className={style.gridIndexBig}>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===eloetel && (
+                                isMouse && contentful === eloetel && (
                                     <div>
                                         {eloetel.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -75,14 +83,16 @@ const MenuTemplate = ({data,}) => {
                                     </div>
                                 )}
 
-                             {
+                            {
                                 !isMouse && (
-                                <Image fluid={contentfulAlapKepek.eloetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
                                 )
                             }
                             {
-                                isMouse && contentful!==eloetel && (
-                                <Image fluid={contentfulAlapKepek.eloetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== eloetel && (
+                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
@@ -110,7 +120,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Előételek" : "Starters"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {eloetel.map((e,index) => {
+                            {eloetel.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -124,16 +134,17 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===eloetel && (
+                                isMouse && contentful === eloetel && (
                                     <div>
                                         {eloetel.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -144,12 +155,14 @@ const MenuTemplate = ({data,}) => {
 
                             {
                                 !isMouse && (
-                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
                                 )
                             }
                             {
-                                isMouse && contentful!==eloetel && (
-                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== eloetel && (
+                                    <Image fluid={contentfulAlapKepek.eloetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
@@ -162,7 +175,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek" : "Soups"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {leves.map((e,index) => {
+                            {leves.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -176,16 +189,17 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===leves && (
+                                isMouse && contentful === leves && (
                                     <div>
-                                        {leves.map((blog,index) => {
+                                        {leves.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -195,28 +209,31 @@ const MenuTemplate = ({data,}) => {
                                 )}
                             {
                                 !isMouse && (
-                                    <Image fluid={contentfulAlapKepek.leves.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
-                                    )
+                                    <Image fluid={contentfulAlapKepek.leves.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                )
                             }
                             {
-                                isMouse && contentful!==leves && (
-                                    <Image fluid={contentfulAlapKepek.leves.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== leves && (
+                                    <Image fluid={contentfulAlapKepek.leves.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
                     </div>
 
                     <div className={style.gridIndexBig}>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===grill && (
+                                isMouse && contentful === grill && (
                                     <div>
-                                        {grill.map((blog,index)=> {
+                                        {grill.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -226,12 +243,14 @@ const MenuTemplate = ({data,}) => {
                                 )}
                             {
                                 !isMouse && (
-                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
                                 )
                             }
                             {
-                                isMouse && contentful!==grill && (
-                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== grill && (
+                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
@@ -239,7 +258,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {grill.map((e,index) => {
+                            {grill.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -260,7 +279,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {grill.map((e,index) => {
+                            {grill.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -274,16 +293,17 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===grill && (
+                                isMouse && contentful === grill && (
                                     <div>
-                                        {grill.map((blog,index) => {
+                                        {grill.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -293,12 +313,14 @@ const MenuTemplate = ({data,}) => {
                                 )}
                             {
                                 !isMouse && (
-                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
                                 )
                             }
                             {
-                                isMouse && contentful!==grill && (
-                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== grill && (
+                                    <Image fluid={contentfulAlapKepek.klasszikus.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
@@ -309,7 +331,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {foetel.map((e,index) => {
+                            {foetel.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -323,16 +345,17 @@ const MenuTemplate = ({data,}) => {
                                 )
                             })}
                         </div>
-                        <div  className={`${style.indexEloetelImg} ${style.col6}`}>
+                        <div className={`${style.indexEloetelImg} ${style.col6}`}>
                             {
-                                isMouse && contentful===foetel&& (
+                                isMouse && contentful === foetel && (
                                     <div>
-                                        {foetel.map((blog,index) => {
+                                        {foetel.map((blog, index) => {
                                             return (
                                                 <div key={index}>
                                                     {
-                                                        blog.fenykep && blog.nev === name &&  (
-                                                            <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
+                                                        blog.fenykep && blog.nev === name && (
+                                                            <Image fluid={blog.fenykep.fluid}
+                                                                   className={style.indexEloetelImg}/>
                                                         )
                                                     }
                                                 </div>
@@ -342,12 +365,14 @@ const MenuTemplate = ({data,}) => {
                                 )}
                             {
                                 !isMouse && (
-                                    <Image fluid={contentfulAlapKepek.foetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                    <Image fluid={contentfulAlapKepek.foetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
                                 )
                             }
                             {
-                                isMouse && contentful!==foetel && (
-                                    <Image fluid={contentfulAlapKepek.foetel.fluid}  className={`${style.indexEloetelImg} ${style.col6}`}/>
+                                isMouse && contentful !== foetel && (
+                                    <Image fluid={contentfulAlapKepek.foetel.fluid}
+                                           className={`${style.indexEloetelImg} ${style.col6}`}/>
 
                                 )}
                         </div>
@@ -359,7 +384,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishess"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {koret.map((e,index) => {
+                            {koret.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -374,7 +399,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {savanyu.map((e,index) => {
+                            {savanyu.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexFoodWrapper}>
@@ -391,7 +416,7 @@ const MenuTemplate = ({data,}) => {
                             <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Dessert"}</h1>
                             <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
 
-                            {desszert.map((e,index) => {
+                            {desszert.map((e, index) => {
                                 return (
                                     <div key={index}>
                                         <div className={style.indexDessertWrapper}>
@@ -405,10 +430,10 @@ const MenuTemplate = ({data,}) => {
                             <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}
                                       className={`${style.col6} ${style.carausel2}`}>
                                 {
-                                    contentfulDesszertek.fenykepek.map(x=>{
-                                        return(
-                                            <div key={x.id} >
-                                                <Image fluid={x.fluid}className={style.indexEloetelImg} />
+                                    contentfulDesszertek.fenykepek.map(x => {
+                                        return (
+                                            <div key={x.id}>
+                                                <Image fluid={x.fluid} className={style.indexEloetelImg}/>
                                             </div>
                                         )
                                     })
@@ -428,9 +453,291 @@ const MenuTemplate = ({data,}) => {
 
                     </div>
                 </div>
+
+
+                {/*Borlap-----------------------------------------------------------------------------------*/}
+                <div className={style.indexpage}>
+                    <h1 className={style.wineH1}>{nyelv.lang === "HU" ? "Borlap" : "Wines"}</h1>
+                    <h1 className={style.mobilDrinkTitle}> Itallap</h1>
+                    <div className={style.gridIndexDrink}>
+                        <div className={`${style.col6}`}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Ház bora" : "House wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            {borlap.map((e, index) => e.fajta === "Ház bora" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={`${style.col6} `}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Desszert borok " : "Dessert wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            {borlap.map((e, index) => e.fajta === "Desszertborok" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
+                        <div className={`${style.fullwidth} ${style.drinkDevider}`}/>
+                        <div className={`${style.col6} `}>
+
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Rozé" : "Rosé wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+
+                            {borlap.map((e, index) => e.fajta === "Rozé" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={`${style.col6} `}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Habzók/Pezsgők" : "Sparklink wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+
+                            {borlap.map((e, index) => e.fajta === "Habzók/pezsgők" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className={style.gridIndexDrink}>
+                        <div className={`${style.col6} `}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Fehér Borok" : "White wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+
+                            <div className={style.content}>
+                                {borlap.map((e, index) => e.fajta === "Fehérborok" && (
+                                    <div key={index}>
+                                        <div className={style.indexFoodWrapper}>
+                                            <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                            <p className={`${style.indexArak}`}>{e.ar} </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className={`${style.col6} `}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Vörösborok" : "Red wines"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+
+                            <div className={style.content}>
+                                {borlap.map((e, index) => e.fajta === "Vörösborok" && (
+                                    <div key={index}>
+                                        <div className={style.indexFoodWrapper}>
+                                            <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                            <p className={`${style.indexArak}`}>{e.ar} </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className={`${style.fullwidth} ${style.drinkDevider}`}/>
+
+                    </div>
+                </div>
+                {/*üdítők-----------------------------------------------------------------------------------*/}
+                <div className={style.indexpage}>
+                    <h1 className={style.drinkH1}>{nyelv.lang === "HU" ? "Üdítők" : "Soft drinks"}</h1>
+                    <div className={style.gridIndexDrink}>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Limonádék-jeges teák" : "Lemonade-Ice tea"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {udito.map((e, index) => e.fajta === "Limonádék-jeges teák-szörpök" && (
+                                    <div key={index}>
+                                        <div className={style.indexFoodWrapper}>
+                                            <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                            <p className={`${style.indexArak}`}>{e.ar} </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Szénsavas üdítők" : "Sparkling drink"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {udito.map((e, index) => e.fajta === "Szénsavas üdítők" && (
+                                    <div key={index}>
+                                        <div className={style.indexFoodWrapper}>
+                                            <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                            <p className={`${style.indexArak}`}>{e.ar} </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className={`${style.fullwidth} ${style.drinkDevider}`}/>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Víz" : "Water"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            {udito.map((e, index) => e.fajta === "Víz" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Gyümölcslevek" : "Juice"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            {udito.map((e, index) => e.fajta === "Gyümölcslevek" && (
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                {/*kávék-----------------------------------------------------------------------------------*/}
+                <div className={style.indexpage}>
+                    <h1 className={style.drinkH1}>Kávék</h1>
+
+                    <div className={style.gridIndexDrink}>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Kávék" : "Coffees"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                <p className={style.indexPAllergen}>Kérheted növényi alapú tejjel! +100Ft</p>
+
+                                {kave.map((e, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <div className={style.indexFoodWrapper}>
+                                                <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                                <p className={`${style.indexArak}`}>{e.ar} </p>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+
+                        </div>
+                        <div className={`${style.col6} ${style.drinkImageDiv}`}>
+
+                            <img src={kv} className={`${style.drinkImage}`}/>
+                        </div>
+                    </div>
+
+                </div>
+                {/*alkohol-----------------------------------------------------------------------------------*/}
+                <div className={style.indexpage}>
+                    <h1 className={style.drinkH1}>{nyelv.lang === "HU" ? "Alkoholos italok" : "Alcoholic drinks"}</h1>
+
+                    <div className={style.gridIndexDrink}>
+                        <div className={style.col6}>
+
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Csapolt Sörök-Ciderek-" : "Draft beers-Ciders"}</h1>
+                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Kézműves sörök" : "Craft beers"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+
+                            {alkohol.map((e, index) => e.fajta === "csapolt Sörök-ciderek-kézműves sörök" && (
+
+                                <div key={index}>
+                                    <div className={style.indexFoodWrapper}>
+                                        <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                        <p className={`${style.indexArak}`}>{e.ar} </p>
+                                    </div>
+                                </div>
+
+                            ))}
+                        </div>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Üveges Sörök-Ciderek-" : "Bottle beers-ciders"}</h1>
+                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Kézműves sörök" : "craft beers"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {alkohol.map((e, index) => e.fajta === "üveges Sörök-ciderek-kézműves sörök" && (
+
+                                    <div key={index}>
+                                        <div className={style.indexFoodWrapper}>
+                                            <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                            <p className={`${style.indexArak}`}>{e.ar} </p>
+                                        </div>
+                                    </div>
+
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={style.gridIndexDrink}>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Koktélok-Spritzerek" : "Coctails"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {alkohol.map((e, index) => e.fajta === "Koktélok-spritzerek" &&
+                                    (
+                                        <div key={index}>
+                                            <div className={style.indexFoodWrapper}>
+                                                <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                                <p className={`${style.indexArak}`}>{e.ar} </p>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                            </div>
+
+                        </div>
+                        <div className={`${style.col6} ${style.drinkImageDiv}`}>
+
+                            <img src={ital} className={`${style.drinkImage}`}/>
+                        </div>
+                        <div className={`${style.fullwidth} ${style.drinkDevider}`}></div>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Pálinkák" : "Pálinka"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {alkohol.map((e, index) => e.fajta === "Páliknák" &&
+                                    (
+                                        <div key={index}>
+                                            <div className={style.indexFoodWrapper}>
+                                                <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                                <p className={`${style.indexArak}`}>{e.ar} </p>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                            </div>
+                        </div>
+                        <div className={style.col6}>
+                            <h1 className={`${style.drinkTitle}`}>{nyelv.lang === "HU" ? "Párlatok-Likőrök" : "Spirits"}</h1>
+                            <img src={a} alt={"devider"} className={`${style.indexDevider}`}/>
+                            <div className={style.content}>
+                                {alkohol.map((e, index) => e.fajta === "Párlatok-Likőrök" &&
+                                    (
+                                        <div key={index}>
+                                            <div className={style.indexFoodWrapper}>
+                                                <h3 className={style.indexH3}> {nyelv.lang === "HU" ? e.nev : e.angolnev}</h3>
+                                                <p className={`${style.indexArak}`}>{e.ar} </p>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </Layout>
-
-
         </>
     )
 }
@@ -561,168 +868,39 @@ query GetSingleMenu($lang: String)
           }
         }
       }
+    },
+     allContentfulBorlap {
+      nodes {
+        ar
+        fajta
+        angolnev
+        nev
+      }
+    },
+     allContentfulAlkoholosItalok {
+      nodes {
+        nev
+        fajta
+        angolnev
+        ar
+      }
+    },
+    allContentfulUditok {
+      nodes {
+        angolnev
+        ar
+        fajta
+        nev
+      }
+    },
+    allContentfulKavek {
+      nodes {
+        angolnev
+        ar
+        nev
+      }
     }   
 }  
 `
 
 export default MenuTemplate
-/* <div className={style.col6}>
-                            {desszert.map(blog => {
-                                return (
-                                    <div key={blog.id}>
-                                        {
-                                            blog.fenykep && (
-                                                <Image fluid={blog.fenykep.fluid} className={style.indexEloetelImg}/>
-                                            )
-                                        }
-                                        {
-                                            !blog.fenykep && (
-                                                <img src={b} alt={"kep"}
-                                                     className={`${style.indexEloetelImg} ${style.col6}`}/>
-                                            )
-                                        }
-
-                                    </div>
-                                )
-                            })}
-                        </div>*/
-/*
- <Layout isIndex lang={nyelv.lang}>
-
-                <div className={style.indexpage}>
-
-                    <div className={style.gridIndex}>
-                        <div className={style.col6}>
-                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Levesek-Előételek" : "Soups-Starters"}</h1>
-                            <img  src={a} alt={"devider"} className={`${style.indexDevider}`}/>
-                        </div>
-                        <div className={style.col6}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            {leves.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-                            {eloetel.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <img  src={b} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
-
-                    </div>
-
-                    <div className={style.gridIndex}>
-
-                        <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Klasszikusok" : "Classics"}</h1>
-                                <img  src={c} alt={"kep"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {grill.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-
-                        </div>
-
-                        <div className={`${style.col6} ${style.indexLevesGrillPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Savanyúság" : "Salad"}</h1>
-                                <img  src={d} alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {savanyu.map(e => {
-                                return (
-                                    <div key={e.id} className={style.indexFoodWrapper}>
-                                        <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-
-                    </div>
-                    <div className={style.gridIndex}>
-                        <img  src={e} alt={"kep"} className={`${style.indexFoetelImg} ${style.fullwidth}`}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Főételek" : "Main courses"}</h1>
-                                <img  src={f} alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {foetel.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            <div>
-                                <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Köretek" : "Garnishes"}</h1>
-                                <img  src={g } alt={"devider"} className={`${style.indexDevider}`}/>
-                            </div>
-                            {koret.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexFoodWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                            <p className={`${style.indexArak}`}>{e.arak} Ft</p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-
-                    </div>
-                    <div className={style.gridIndex}>
-                        <div className={style.col6}>
-                            <h1 className={`${style.indexTitle}`}>{nyelv.lang === "HU" ? "Desszertek" : "Desserts"}</h1>
-                            <img  src={h} alt={"devider"} className={`${style.indexDevider}`}/>
-                        </div>
-                        <div className={style.col6}/>
-                        <div className={`${style.col6} ${style.indexEloetelPosition}`}>
-                            {desszert.map(e => {
-                                return (
-                                    <div key={e.id}>
-                                        <div className={style.indexDessertWrapper}>
-                                            <h3 className={`${style.indexH3}`}> {e.nev}</h3>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <img  src={x} alt={"kep"} className={`${style.indexEloetelImg} ${style.col6}`}/>
-
-                    </div>
-                    <div className={` ${style.indexAllergenPosition}`}>
-                        <p className={` ${style.indexPAllergen}`}> A: {nyelv.lang === "HU" ? "GLUTÉN" : "GLUTEN"}</p>
-                        <p className={` ${style.indexPAllergen}`}>B: {nyelv.lang === "HU" ? "LAKTÓZ" : "LACTOSE"} </p>
-                        <p className={` ${style.indexPAllergen}`}> C: {nyelv.lang === "HU" ? "RÁK, HAL" : "CANCER, FISH"} </p>
-                        <p className={` ${style.indexPAllergen}`}> D: {nyelv.lang === "HU" ? "DIÓ" : "WALNUT"}</p>
-                        <p className={` ${style.indexPAllergen}`}> E: {nyelv.lang === "HU" ? "TOJÁS" : "EGG"}</p>
-                        <p className={` ${style.indexPAllergen}`}> F: {nyelv.lang === "HU" ? "SZÓJA" : "SOY"} </p>
-                        <p className={` ${style.indexPAllergen}`}> G: {nyelv.lang === "HU" ? "ERŐS" : "STRONG"}</p>
-
-                    </div>
-
-
-                </div>
-            </Layout>
- */
