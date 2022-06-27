@@ -8,82 +8,64 @@
 .fullwidth {
     grid-column: 1/-1;
 }
-
 .col1 {
     grid-column: span 1;
 }
-
 .col2 {
     grid-column: span 2;
 }
-
 .col3 {
     grid-column: span 3;
 }
-
 .col4 {
     grid-column: span 4;
 }
-
 .col4-lunch {
     grid-column: span 4;
 }
-
 .col4-ital {
     grid-column: span 4;
 }
-
 .col5 {
     grid-column: span 5;
 }
-
 .col6 {
     grid-column: span 6;
 }
-
 .col6D {
     grid-column: span 6;
-
 }
-
 .col7 {
     grid-column: span 7;
 }
-
 .col8 {
     grid-column: span 8;
 }
-
 .col8-ital {
     grid-column: span 8;
 }
-
 .col8-lunch {
     grid-column: span 8;
 }
-
 .col9 {
     grid-column: span 9;
 }
-
 .col10 {
     grid-column: span 10;
 }
-
 .col11 {
     grid-column: span 11;
 }
-
 /*-----------------------------------------------------------------------------------------------------------*/
 .wine-h1 {
     font-size: 4rem;
     text-align: center;
     margin-top: 6rem;
 }
-.dl-l{
+.dl-l {
     text-align: right;
 }
-.mobil-drink-title{
+.mobil-drink-title {
     display: none;
 }
 .drink-title {
@@ -97,39 +79,31 @@
     margin-top: 4rem;
     margin-bottom: 2rem;
 }
-
 .fixedHeightContainer {
     float: right;
     height: 500px;
     width: 98%;
     padding: 3px;
 }
-
 .content {
     height: 400px;
     overflow: auto;
 }
-
 .drink-image {
     margin: auto;
     width: 75%;
     align-self: center;
     display: grid;
-
-
 }
-
 .drink-image-div {
     display: grid;
     align-self: center;
     justify-self: center;
     margin-top: 5rem;
 }
-
 .drink-devider {
     height: 100px;
 }
-
 /*-----------------------------------------------------------------------------------------------------------*/
 /*galery*/
 .galery-page {
@@ -141,7 +115,6 @@
     margin: auto;
     padding-top: 50px;
 }
-
 .galery-photosize {
     width: 300px;
     height: 200px;
@@ -149,8 +122,7 @@
     justify-self: center;
     margin: auto;
 }
-
-/*manu*/
+/*---------------------------------------------------manu---------------------------------------------------------------------*/
 .navbar-menu {
     display: none;
     display: grid;
@@ -161,15 +133,12 @@
     text-align: center;
     padding-right: 20px;
 }
-
 .navbar-menu-button {
     background-color: rgba(93, 154, 6, 0.01);
     border: none;
     display: none;
     font-size: larger;
-
 }
-
 .dropdown-content {
     display: none;
     width: 60%;
@@ -182,9 +151,7 @@
     line-height: 2.2;
     background-color: rgb(1, 1, 1, 0.85);
     box-shadow: 5px 5px 5px black;
-
 }
-
 .menu-link {
     color: white;
     font-size: 20px;
@@ -192,11 +159,8 @@
     padding-right: 15px;
     line-height: 90px;
     font-weight: bold;
-
 }
-
 .menu-button-phone {
-
     color: white;
     font-size: 20px;
     padding: 10px;
@@ -205,34 +169,25 @@
     display: grid;
     align-self: center;
 }
-
 .menu-button-phone:hover {
-
-
     font-weight: bold;
 }
-
 .menu-button-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 100px;
     margin: auto;
     font-size: 20px;
-
-
 }
-
 .open-menu {
     display: block !important;
 }
-
 .open-menu-position {
     display: grid;
     margin: auto;
     justify-self: center;
     align-self: center;
 }
-
 .close--button {
     margin: 20px;
     font-size: 20px;
@@ -241,11 +196,9 @@
     background-color: rgb(1, 1, 1, 0);
     color: white;
 }
-
 .close--button:hover {
     opacity: 50%;
 }
-
 .menu-button {
     display: grid;
     margin: 0;
@@ -253,9 +206,7 @@
     border: none;
     background-color: rgb(1, 1, 1, 0);
     cursor: pointer;
-
 }
-
 .menu-button:disabled {
     display: grid;
     align-self: center;
@@ -266,7 +217,6 @@
     background-color: rgb(1, 1, 1, 0);
     cursor: none;
     font-weight: bold;
-
 }
 
 /*-------------------------------------akciók----------------------------------*/
@@ -275,16 +225,14 @@
     margin: auto;
     padding-bottom: 100px;
 }
-
-.program-h3{
-    font-size:calc(var(--h3)*1.1) ;
+.program-h3 {
+    font-size: calc(var(--h3) * 1.1);
     text-align: left;
     padding: 1rem;
     width: 85%;
     margin: auto;
-
 }
-.program-subtitle{
+.program-subtitle {
     text-align: center;
     font-size: var(--h3);
     margin-bottom: 3rem;
@@ -293,22 +241,18 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: auto;
-
 }
-
 .akcio-h1 {
     text-align: center;
     font-size: calc(var(--h1) * 2);
     margin-top: 4rem;
     margin-bottom: 1rem;
 }
-
 .akcio-h2 {
     text-align: center;
     font-size: calc(var(--h1) * 1.3);
     padding-bottom: 50px;
 }
-
 .akciok-p {
     font-size: var(--p);
     padding: 20px;
@@ -317,7 +261,6 @@
     line-height: 1.5;
     letter-spacing: 2px;
 }
-
 .akciok-p-heti {
     font-size: var(--p);
     padding: 15px;
@@ -326,15 +269,13 @@
     line-height: 1.5;
     letter-spacing: 2px;
 }
-
 .akcio-img-left {
-    height: 650px;
+    height: 450px;
     display: grid;
     align-self: center;
     justify-content: center;
     justify-self: right;
 }
-
 .akcio-img-right {
     height: 600px;
     display: grid;
@@ -343,14 +284,12 @@
     justify-self: left;
     opacity: 0.9;
 }
-
 .akciok-wrapper {
     display: grid;
     align-self: center;
     justify-content: center;
     justify-self: center;
 }
-
 .akciok-img-phone {
     display: none;
 }
@@ -360,11 +299,9 @@
     width: 90%;
     margin: auto;
 }
-
 .footer-open {
     font-size: var(--h3);
 }
-
 .footer-icon-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -373,18 +310,15 @@
     justify-content: center;
     margin: auto;
 }
-
 .footer-copyR {
     text-align: center;
     align-self: end;
     padding-bottom: 10px;
 }
-
 .footer-StefanDora {
     display: none;
     text-align: center;
 }
-
 .footer-logo {
     width: 15vh;
 }
@@ -397,14 +331,12 @@
     grid-gap: 20px 40px;
     margin: 0;
 }
-
-/*kezdőlap*/
+/*------------------------------------kezdőlap-----------------------------------------------*/
 .logo {
     height: 250px;
     padding: 10px;
     margin-top: 60px;
 }
-
 .navbar-wrapper {
     display: grid;
     height: 100%;
@@ -418,33 +350,27 @@
     background-size: cover;
     background-position: bottom;
 }
-
 .navbar-title {
     display: none;
 }
-
 .navbar-link-wrapper-margin {
     margin-top: -225px;
 }
-
-/*lunch*/
+/*---------------------------------------------------------------lunch----------------------------------------------------*/
 .logo-lunch {
     height: 150px;
     padding-left: 20px;
 }
-
 .navbar-title-wrapper-lunch {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
 }
-
 .navbar-title-lunch {
     font-size: var(--h1);
     align-self: center;
     padding-left: 20px;
     letter-spacing: 3px;
 }
-
 .navbar-wrapper-lunch {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -456,7 +382,6 @@
     z-index: 100;
     background-color: rgb(1, 1, 1, 0.6);
 }
-
 /* background-color: rgb(1,1,1,0.6);*/
 .navbar-link-wrapper {
     display: grid;
@@ -465,7 +390,6 @@
     justify-self: end;
     padding: 10px;
 }
-
 .navbar-link {
     color: white;
     padding: 10px;
@@ -476,8 +400,6 @@
     border: none;
     font-weight: bold;
 }
-
-
 .menu-button:disabled {
     color: darkgrey;
     padding: 10px;
@@ -486,20 +408,14 @@
     background-color: rgb(1, 1, 1, 0);
     border: none;
 }
-
 .navbar-link:hover {
     font-weight: bold;
     color: darkgrey;
-
 }
-
 .active {
     font-weight: bold;
     color: lightgrey;
-
-
 }
-
 /*-------------------------------------elérhetőség----------------------------------*/
 
 .grid-contact {
@@ -511,26 +427,20 @@
     padding: 2vh 0 10vh 0;
     grid-gap: 40px 40px;
 }
-
 .contacts-open {
     font-size: calc(var(--h3) * 1.1);
-
 }
-
 .map {
     filter: grayscale(55%) invert(100%) contrast(98%);
     width: 100%;
 }
-
 .contacts-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 .contacts-title {
     font-size: var(--h2);
 }
-
 .line {
     background-image: linear-gradient(to left, #000000, #fffff0);
     padding: 3px;
@@ -540,7 +450,6 @@
     border-radius: 20px;
     margin-bottom: 40px;
 }
-
 /*tel-email-cim*/
 .contacts-p {
     display: grid;
@@ -548,7 +457,6 @@
     line-height: 2.5;
     font-size: var(--p);
 }
-
 .contact-img {
     width: 50vh;
     height: auto;
@@ -557,12 +465,10 @@
     justify-self: right;
     opacity: 0.8;
 }
-
 .contact-icon {
     border-radius: 20%;
     height: 4vh;
 }
-
 .contact-icon-wrapper {
     display: grid;
     grid-template-columns:1fr 0.1fr 0.1fr;
@@ -576,28 +482,22 @@
     margin: auto;
     padding: 2vh 0 10vh 0;
     grid-gap: 20px 20px;
-
 }
-
-
 .lunch-title {
     padding-top: 50px;
     font-size: calc(var(--h2) * 1.5);
 }
-
 .lunch-h2 {
     font-size: var(--h1);
     line-height: 1.5;
     font-style: italic;
     font-weight: bold;
 }
-
 .lunch-date-wrapper {
     opacity: 60%;
     padding-left: 20px;
     text-align: right;
 }
-
 .lunch-footer {
     font-size: var(--p);
     text-align: center;
@@ -615,18 +515,15 @@
     margin: auto;
     padding: 0 0 110px 0;
 }
-
 .food-img-right {
     width: 60vh;
     height: auto;
     display: grid;
     align-self: center;
 }
-
 .food-img-left-phone {
     display: none;
 }
-
 .food-img-left {
     width: 60vh;
     max-width: 600px;
@@ -634,17 +531,14 @@
     display: grid;
     align-self: center;
 }
-
 .food-wrapper {
     align-self: center;
     display: grid;
 }
-
 .food-title {
     font-size: var(--h2);
     padding-bottom: 30px;
 }
-
 .food-p {
     font-size: calc(var(--p) * 1.3);
     line-height: 2;
@@ -658,27 +552,21 @@
     margin: auto;
     padding: 50px 0px 50px 0px;
     line-height: 1.2;
-
 }
-
 .grid-index-big {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: auto;
     padding: 50px 0px 50px 0px;
     line-height: 1.2;
-
 }
-
 .grid-index-drink {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: auto;
     padding: 50px 0px 50px 0px;
     line-height: 1.2;
-
 }
-
 .grid-index-small {
     display: none;
     grid-template-columns: repeat(12, 1fr);
@@ -686,12 +574,10 @@
     padding: 50px 0px 50px 0px;
     line-height: 1;
 }
-
 .indexpage {
     width: 80%;
     margin: auto;
 }
-
 .index-eloetel-img {
     width: 60vh;
     height: 40vh;
@@ -700,41 +586,31 @@
     max-height: 400px;
     min-height: 150px;
     margin: auto;
-
 }
-
-
 .index-title {
     font-size: var(--h2);
     text-align: center;
 }
-
 .index-h3 {
     font-size: var(--h3);
 }
-
 .index-h3-hover {
     font-size: var(--h3);
     display: grid;
 }
-
 .index-h3-hover:hover {
     color: gray;
-
 }
-
 .index-p {
     font-size: calc(var(--p) * 0.8);
     padding-left: 10px;
     margin-top: -10px;
 }
-
 .index-arak {
     font-size: var(--h3);
     text-align: right;
     padding-right: 20px;
 }
-
 .index-devider {
     width: 600px;
     display: grid;
@@ -742,28 +618,23 @@
     margin: auto;
     margin-top: -30px;
 }
-
 .index-food-wrapper {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     padding: 15px;
 }
-
 .index-dessert-wrapper {
     text-align: center;
     padding: 30px;
 }
-
 .index-eloetel-position {
     width: 90%;
     justify-self: center;
 }
-
 .index-leves-grill-position {
     width: 90%;
     justify-self: center;
 }
-
 .index-foetel-img {
     width: 90%;
     height: 350px;
@@ -772,14 +643,12 @@
     object-position: top;
     padding-bottom: 50px;
 }
-
 .index-p-allergen {
     font-size: var(--p);
     text-align: center;
     padding-left: 15px;
     font-weight: bold;
 }
-
 .index-allergen-position {
     display: grid;
     grid-template-rows: 1fr;
@@ -790,52 +659,38 @@
     margin: auto;
     padding: 30px;
 }
-
+/*-----------------------------------------------------------------------media screen-----------------------------------------------------*/
 @media screen and (min-width: 1980px) {
     .grid-contact {
         max-width: 1600px;
     }
-
     .grid-lunch {
         max-width: 1500px;
-
     }
-
     .grid-akcio {
         max-width: 1300px;
-
     }
-
     .grid-food {
         max-width: 1400px;
         margin: auto;
-
     }
-
     .grid-index {
         max-width: 1600px;
         line-height: 1;
-
     }
-
     .grid-index-big {
         max-width: 1600px;
         line-height: 1;
-
     }
-    .grid-index-drink{
+    .grid-index-drink {
         max-width: 1600px;
     }
-
     .navbar-wrapper {
         min-height: 600px;
-
     }
-
     .contact-img {
         max-height: 600px;
     }
-
 }
 
 @media screen and (max-width: 1870px) {
@@ -849,7 +704,6 @@
         justify-self: center;
         width: 80%;
     }
-
     .galery-photosize {
         width: 250px;
         height: 150px;
@@ -863,32 +717,24 @@
         padding: 10px;
         margin-top: 100px;
     }
-
     .navbar-wrapper {
-
         min-height: 700px;
-
     }
-
     .index-eloetel-img {
         max-height: 310px;
     }
-
     .food-img-left {
         max-width: 500px;
     }
-
     .contact-img {
         max-height: 400px;
         max-width: 500px;
     }
-
     .galery-page {
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 30px;
         width: 80%;
     }
-
     .galery-photosize {
         width: 270px;
         height: 170px;
@@ -901,27 +747,21 @@
         padding: 10px;
         margin-top: 100px;
     }
-
     .akcio-page {
         width: 80%;
     }
-
     .akcio-img-left {
-        max-height: 550px;
+        max-height: 400px;
     }
-
     .akcio-img-right {
         max-height: 550px;
     }
-
     .akciok-p-heti {
         line-height: 1.2;
     }
-
     .akciok-p {
         line-height: 1.2;
     }
-
     .navbar-wrapper {
         display: grid;
         margin-top: 0;
@@ -934,24 +774,19 @@
         background-size: cover;
         background-position: bottom;
     }
-
     .logo-lunch {
         height: 120px;
         padding-left: 20px;
         padding-top: 20px;
     }
-
     .grid-food {
         width: 80%;
         padding: 0 0 80px 0;
     }
-
     .index-devider {
         width: 500px;
         margin-top: -20px;
-
     }
-
     .index-eloetel-img {
         width: 40vh;
         min-width: 400px;
@@ -963,13 +798,9 @@
         justify-self: center;
         align-self: center;
     }
-
     .index-allergen-position {
-
         width: 90%;
-
     }
-
 }
 
 @media screen and (max-width: 1380px ) {
@@ -978,7 +809,6 @@
         padding: 10px;
         margin-top: 100px;
     }
-
     .navbar-wrapper {
         display: grid;
         height: 10%;
@@ -992,12 +822,10 @@
         background-size: cover;
         background-position: bottom;
     }
-
     .contact-img {
         max-height: 300px;
         max-width: 400px;
     }
-
     .galery-photosize {
         width: 250px;
         height: 150px;
@@ -1008,83 +836,64 @@
     :root {
         --p: 19px;
     }
-
     .logo {
         height: 140px;
         padding: 10px;
         margin-top: 10px;
     }
-
     .navbar-wrapper {
-
         min-height: 450px;
         background-image: url("../images/navbarkép/pohár2.png");
-
     }
-
     .navbar-wrapper-lunch {
         display: grid;
         grid-template-columns: 1fr 0.5fr;
         height: 130px;
     }
-
     .navbar-menu {
         display: grid;
     }
-
     .navbar-link-wrapper {
         display: none;
     }
-
     .navbar-link-wrapper-margin {
         display: none;
     }
-
     .navbar-menu-button {
         display: grid;
         font-size: 50px;
         color: white;
         cursor: pointer;
     }
-
     .index-eloetel-img {
         max-height: 250px;
         min-width: 350px;
         max-width: 350px;
     }
-
     .index-allergen-position {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
         width: 80%;
     }
-
     .akciok-p-heti {
         padding: 10px;
         letter-spacing: 1.1px;
     }
-
     .akciok-p {
         padding: 10px;
         letter-spacing: 1.1px;
-
     }
-
     .akcio-img-right {
         max-height: 500px;
     }
-
     .akcio-img-left {
-        max-height: 450px;
+        max-height: 380px;
     }
-
     .galery-page {
         width: 90%;
         padding: 0;
     }
-
-
 }
 
 @media screen and (max-width: 1130px ) {
@@ -1093,82 +902,76 @@
         padding: 10px;
         margin-top: 0;
     }
-
     .navbar-wrapper {
-
         min-height: 400px;
-
     }
-
     .col6 {
         grid-column: 1/-1;
-
     }
-
-
+    .col8-ital {
+        grid-column: 1/-1;
+    }
+    .akcio-img-left {
+        display: none;
+    }
+    .akciok-img-phone {
+        display: grid;
+        width: 70%;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+    }
     .grid-index-small {
         display: grid;
     }
-
     .grid-index-big {
         display: none;
     }
-
     .drink-devider {
         display: none;
     }
-
     .content {
         height: 100%;
         overflow: auto;
     }
-
     .contact-img {
         display: none;
-
     }
-    .drink-image-div{
-        margin:3rem 0 3rem 0;
+    .drink-image-div {
+        margin: 3rem 0 3rem 0;
     }
-    .mobil-drink-title{
+    .mobil-drink-title {
         display: grid;
         font-size: 4.5rem;
         text-align: center;
-        margin:2rem 0 0 0 ;
+        margin: 2rem 0 0 0;
     }
-    .grid-index-drink{
-        padding:0;
-
+    .grid-index-drink {
+        padding: 0;
     }
-    .drink-h1{
+    .drink-h1 {
         display: none;
     }
-    .wine-h1{
+    .wine-h1 {
         display: none;
     }
-
     .grid-food {
         width: 70%;
         padding-bottom: 20px;
     }
-
     .food-img-left {
         display: none;
     }
-
     .food-title {
         font-weight: bold;
         padding-bottom: 15px;
     }
-
     .carausel {
         display: none;
     }
-
     .carausel2 {
         display: grid;
     }
-
     .food-img-left-phone {
         width: 100%;
         max-width: 900px;
@@ -1181,7 +984,6 @@
         justify-content: center;
         justify-self: center;
     }
-
     /*index*/
     .index-devider {
         width: 600px;
@@ -1190,8 +992,6 @@
         margin: auto;
         margin-top: -40px;
     }
-
-
     .index-eloetel-img {
         width: 90%;
         max-width: 600px;
@@ -1204,18 +1004,14 @@
         object-fit: cover;
         object-position: center;
     }
-
     .galery-photosize {
         width: 200px;
         height: 100px;
     }
-
     .galery-page {
         row-gap: 20px;
         column-gap: 15px;
     }
-
-
 }
 
 @media screen and (max-width: 880px ) {
@@ -1225,51 +1021,39 @@
         --p: 19px;
         --h3: 20px;
     }
-
     .akcio-page {
         width: 90%;
     }
-
     .grid-akcio {
         padding: 50px 0 40px 0;
     }
-
     .akcio-h1 {
         padding-bottom: 50px;
     }
-
     .akcio-img-right {
         max-height: 400px;
     }
-
     .logo {
         height: 130px;
         padding: 10px;
         margin-top: 0;
     }
-
     .navbar-wrapper {
-
         min-height: 350px;
-
     }
-
     /*contact*/
     .contact-icon-wrapper {
         display: grid;
         grid-template-columns: 1fr;
     }
-
     .contact-icon-wrapper a {
         display: none;
     }
-
     .contacts-title {
         text-align: center;
         padding: 0;
         margin: 0;
     }
-
     .contacts-p {
         display: grid;
         align-self: center;
@@ -1277,41 +1061,32 @@
         line-height: 1.7;
         font-size: var(--p);
     }
-
-
     .col8-lunch {
         grid-column: span 6;
     }
-
     .col4-lunch {
         grid-column: span 6;
     }
-
     .map {
         filter: grayscale(55%) invert(100%) contrast(98%);
         width: 100%;
         height: 300px;
     }
-
     .food-img-left-phone {
         max-width: 700px;
     }
-
     .index-allergen-position {
         width: 90%
     }
-
     .line {
         display: none
     }
-
     .galery-page {
         grid-template-columns: 1fr 1fr;
         row-gap: 20px;
         column-gap: 15px;
         width: 70%;
     }
-
 }
 
 @media screen and (max-width: 780px ) {
@@ -1320,14 +1095,9 @@
         padding: 10px;
         margin-top: 15px;
     }
-
     .navbar-wrapper {
-
         min-height: 350px;
-
-
     }
-
     .index-eloetel-img {
         width: 90%;
         min-height: 280px;
@@ -1336,25 +1106,21 @@
         margin: auto;
         object-position: center;
     }
-
     .index-allergen-position {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 90%;
     }
-
     .index-p-allergen {
         font-size: var(--p);
         text-align: left;
         padding-left: 15px;
         font-weight: bold;
     }
-
     .food-img-left-phone {
         max-width: 500px;
         min-width: 400px;
     }
-
     .galery-page {
         grid-template-columns: 1fr 1fr;
         row-gap: 20px;
@@ -1370,85 +1136,51 @@
         --p: 16px;
         --h3: 20px;
     }
-
-    .col8-ital {
-        grid-column: 1/-1;
-
-    }
-    .drink-image-div{
-        margin:2rem 0 1rem 0;
+    .drink-image-div {
+        margin: 2rem 0 1rem 0;
     }
     .akcio-img-right {
         display: none;
     }
-
-    .akcio-img-left {
-        display: none;
-    }
-
     .akciok-p-heti {
         width: 80%;
         text-align: left;
-
     }
-
     .akciok-p {
         width: 80%;
         text-align: left;
-
     }
-
     .akcio-h2 {
         padding-bottom: 30px;
         font-weight: bold;
     }
-
     .akcio-h1 {
         font-weight: bold;
         padding-bottom: 20px;
     }
-
     .akcio-page {
         padding: 20px 0 30px 0;
     }
-
-    .akciok-img-phone {
-        display: grid;
-        width: 100%;
-        align-self: center;
-        justify-self: center;
-        margin: auto;
-    }
-
     .index-dessert-wrapper {
         text-align: center;
         padding: 10px;
     }
-
     .logo {
         height: 100px;
         padding: 10px;
     }
-
     .dropdown-content {
         width: 100%;
-
-
     }
-
     .navbar-menu-button {
         display: grid;
         font-size: 40px;
         color: white;
         cursor: pointer;
     }
-
     .navbar-wrapper {
-
         min-height: 250px;
-
     }
-
     .index-devider {
         width: 500px;
         display: grid;
@@ -1456,7 +1188,6 @@
         margin: auto;
         margin-top: -18px;
     }
-
     .index-foetel-img {
         width: 90%;
         max-height: 150px;
@@ -1466,43 +1197,34 @@
         object-fit: cover;
         object-position: top;
     }
-
     .galery-photosize {
         width: 250px;
         height: 150px;
     }
-
     .galery-page {
         grid-template-columns: 1fr;
         width: 80%;
     }
-
 }
 
 @media screen and (max-width: 580px ) {
     .col8 {
         grid-column: 1/-1;
     }
-
     .col4 {
         grid-column: span 12;
     }
-
     .index-eloetel-img {
         min-height: 200px;
         height: 200px;
         max-height: 200px;
-
     }
-
     .grid-lunch {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         width: 90%;
         margin: auto;
     }
-
-
     .grid-food {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -1510,20 +1232,15 @@
         margin: auto;
         padding: 0 0 50px 0;
     }
-
     .logo {
         height: 100px;
     }
-
     .navbar-wrapper-lunch {
-
         height: 100px;
     }
-
     .logo-lunch {
         height: 80px;
     }
-
     .navbar-wrapper {
         display: grid;
         margin-top: 0;
@@ -1534,7 +1251,6 @@
         background-color: rgb(1, 1, 1);
         background-image: url("../images/navbarkép/pohár3.png");
     }
-
     .grid-contact {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -1544,11 +1260,9 @@
         padding: 2vh 0 10vh 0;
         grid-gap: 40px 40px;
     }
-
     .contacts-title {
         font-weight: bold;
     }
-
     .index-devider {
         width: 400px;
         display: grid;
@@ -1556,25 +1270,18 @@
         margin: auto;
         margin-top: -18px;
     }
-
     .indexpage {
         width: 90%;
         margin: auto;
     }
-
     .food-img-left-phone {
         max-width: 400px;
         min-width: 300px;
         max-height: 200px;
-
     }
-
     .galery-page {
         width: 50%;
-
-
     }
-
 }
 
 @media screen and (max-width: 480px ) {
@@ -1584,60 +1291,46 @@
         --p: 16px;
         --h3: 16px;
     }
-
     .galery-photosize {
         width: 300px;
         height: 200px;
     }
-
     .galery-page {
         width: 100%;
     }
-
     .akciok-p-heti {
         width: 80%;
         text-align: left;
         letter-spacing: 2px;
         padding: 20px 0 20px 0;
-
     }
-
     .grid-index-small {
         display: grid;
     }
-
     .grid-index-big {
         display: none;
     }
-
     .akciok-p {
         width: 80%;
         text-align: left;
         letter-spacing: 2px;
         padding: 20px 0 20px 0;
-
     }
-
     .grid-akcio {
         padding: 20px 0 20px 0;
     }
-
     .akcio-h1 {
         font-size: calc(var(--h1) * 1.7);
         width: 100%;
     }
-
     .indexpage {
         width: 95%;
         margin: auto;
     }
-
     .index-devider {
         width: 300px;
-
         margin-top: -10px;
     }
-
     .index-eloetel-img {
         width: 90%;
         min-height: 180px;
@@ -1646,7 +1339,6 @@
         margin: auto;
         object-position: center;
     }
-
     .grid-lunch {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -1655,12 +1347,10 @@
         padding: 0 0 10vh 0;
         grid-gap: 20px 10px;
     }
-
     .grid-food {
         width: 90%;
         margin: auto;
     }
-
     .grid-contact {
         display: grid;
         align-content: center;
@@ -1669,11 +1359,9 @@
         padding: 20px 0 20px 0;
         grid-gap: 20px 20px;
     }
-
     .navbar-menu-button {
         margin: 0;
     }
-
     .grid-navbar {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -1681,7 +1369,6 @@
         grid-gap: 0px 0px;
         margin: 0;
     }
-
     .index-foetel-img {
         width: 90%;
         max-height: 100px;
@@ -1691,7 +1378,6 @@
         object-fit: cover;
         object-position: top;
     }
-
     .index-allergen-position {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1700,47 +1386,37 @@
         width: 70%;
         padding: 10px;
     }
-
     .index-p-allergen {
         font-size: calc(var(--p) * 0.8);
         text-align: left;
         padding-left: 20px;
         font-weight: bold;
         display: grid;
-
     }
-
     .navbar-menu {
         padding-right: 5px;
     }
-
     .logo {
         height: 100px;
         margin: 0;
         padding: 5px;
     }
-
     .navbar-wrapper {
         min-height: 250px;
         padding-top: 20px;
     }
-
     .lunch-date-wrapper {
-
         margin-bottom: -50px;
     }
-
 }
 
 @media screen and (max-width: 433px ) {
     .col4-lunch {
         grid-column: -1/1;
     }
-
     .col8-lunch {
         grid-column: -1/1;
     }
-
     .index-eloetel-img {
         width: 90%;
         min-width: 200px;
@@ -1748,9 +1424,7 @@
         min-height: 150px;
         height: 150px;
         max-height: 150px;
-
     }
-
     .lunch-date-wrapper {
         opacity: 60%;
         text-align: left;

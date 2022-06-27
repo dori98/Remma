@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 
 import * as style from "../css/style.module.css";
 
-import ital from "../images/ital.png"
+import ital from "../images/zene.png"
 import ital2 from "../images/ital2.png"
 import ital3 from "../images/ital4.jpg"
 
@@ -49,7 +49,7 @@ const IndexTemplate = ({data,}) => {
                         <img src={ital} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
 
                     </div>
-                    <img src={ital3} alt="kép" className={style.akciokImgPhone}/>
+                    <img src={ital} alt="kép" className={style.akciokImgPhone}/>
 
                 </div>
                 {/* <div className={style.akcioPage}>
