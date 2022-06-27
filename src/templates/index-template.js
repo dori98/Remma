@@ -29,6 +29,30 @@ const IndexTemplate = ({data,}) => {
 
             <Layout isIndex lang={nyelv.lang}>
                 <div className={style.akcioPage}>
+
+                    <div className={` ${style.gridAkcio} `}>
+                        <h1 className={`${style.akcioH1} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Programok" : "Programs"}</h1>
+                        <p className={`${style.programSubtitle} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Kezdés 19:00" : "Start at 19:00"}</p>
+
+                        <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
+                            {program.map((e, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <div >
+                                                <h3 className={style.programH3}> {e.datum}- {e.fellepo} </h3>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            )}
+                        </div>
+                        <img src={ital} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
+
+                    </div>
+                    <img src={ital3} alt="kép" className={style.akciokImgPhone}/>
+
+                </div>
+                {/* <div className={style.akcioPage}>
                     <div className={` ${style.gridAkcio} `}>
                         <h1 className={`${style.akcioH1} ${style.fullwidth}`}> {nyelv.lang === "HU" ? "Programok" : "Programs"} </h1>
                         <p className={`${style.programSubtitle} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Kezdés 19:00" : "Start at 19:00"}</p>
@@ -45,8 +69,7 @@ const IndexTemplate = ({data,}) => {
                             )}
                         </div>
                     </div>
-                    {
-                        /*<div className={` ${style.gridAkcio} `}>
+                    <div className={` ${style.gridAkcio} `}>
                         <h1 className={`${style.akcioH1} ${style.fullwidth}`}>{nyelv.lang === "HU" ? "Állandó akcióink" : "Our constant promotions"}</h1>
 
                         <div className={`${style.col8Ital} ${style.akciokWrapper}`}>
@@ -61,11 +84,9 @@ const IndexTemplate = ({data,}) => {
                         <img src={ital} alt="kép" className={`${style.col4Ital} ${style.akcioImgLeft}`}/>
 
                     </div>
-                    <img src={ital3} alt="kép" className={style.akciokImgPhone}/>*/
-                    }
+                    <img src={ital3} alt="kép" className={style.akciokImgPhone}/>
 
-
-                </div>
+                </div>*/}
             </Layout>
         </>
     )
